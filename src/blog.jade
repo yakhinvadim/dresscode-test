@@ -1,0 +1,53 @@
+extend templates/page
+
+block title
+  title Magazine
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Magazine
+      
+      .grid-row
+        .col-md-8.col-md-offset-2
+          .blog
+            .grid-row
+              .col-md-6.col-md-offset-3
+                //- .form-row.form-row--no-margin-bottom-md
+                select.chosen-select.js-chosen-select.form-input(data-placeholder="All news")
+                  // first option must be empty for placeholder
+                  each option in ['','All news','Other option','Another option']
+                    option= option
+            .news-list
+              -
+                var array = [
+                  {
+                    heading: 'Karl Lagerfeld Responds to Pierre Bergé Charges',
+                    image:   'temp/img/lookbook-1.jpg',
+                    summary: 'The funny thing about the Victoria Secret Runway Show: as dazzling as the lingerie may be, its the Angels who steal the spotlight. Dont get us wrong, our jaws drop when we find out how many carats make up the spectacular Fantasy Bras season after season. '
+                  },
+                  {
+                    heading: '30 Supermodels Whose Careers Were Launched by Victorias Secret',
+                    image:   'temp/img/main-slide-1.jpg',
+                    summary: 'If you and your BFF havent already considered being Gigi Hadid and Kendall Jenner for Halloween, who are you, really? The supermodel duos been on our radar since last year, when they began stepping out together in looks we instantly wanted to re-create.'
+                  },
+                  {
+                    heading: 'This 18-Year-Old With Down Syndrome Just Won Model of the Year, and This Is Why',
+                    image:   'temp/img/lookbook-1.jpg',
+                    summary: 'Do you hear that? Its the collective sigh of fashion editors everywhere. Fashion Month has at last come to an end, leaving in its wake a mountain of new looks were already eying for Spring 2016.'
+                  }
+                ]
+              each object in array
+                .news.news--borders
+                  h4.news__heading
+                    a.link.link--secondary.link--no-color(href="#")= object.heading
+                  a(href="#")
+                    img.news__image(src="#{object.image}", alt="")
+                  .news__summary
+                    p= object.summary
+                  a.link(href="#") read more
+              .grid-row
+                .col-md-6.col-md-offset-3
+                  button.btn.btn--secondary.blog__load-more Load more

@@ -1,0 +1,29 @@
+.catalog-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 50px;
+  &__item {
+    width: 282px;
+    margin-right: 24px;
+    margin-bottom: 30px;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  &__load-more-wrapper {
+    width: 100%;
+  }
+  &__load-more {
+    font-size: 19px;
+  }
+}
+
+@media (max-width:767px) {
+  .catalog-grid {
+    flex-flow: column nowrap;
+    align-items: center;
+    &__item {
+      margin-right: 0;
+    }
+  }
+}

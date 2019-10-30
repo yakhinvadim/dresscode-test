@@ -1,0 +1,15 @@
+.search-message {
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  &__query {
+    color: #a8a8a8;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-message {
+    margin-top: -25px;
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,14 @@
+.account-order {
+  &__heading {
+    margin: 30px auto 65px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .account-order {
+    &__heading {
+      font-size: 30px;
+    }
+  }
+}

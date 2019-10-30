@@ -1,0 +1,109 @@
+extend templates/page
+
+block title
+  title Profile
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Profile
+          
+      .grid-row
+        .col-md-8.col-md-offset-2
+          ul.account-menu.ul--reset
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Settings
+            li.account-menu__item.account-menu__item--current
+              a.account-menu__link.link.link--secondary(href="#") Orders history
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Favorite
+              
+      .grid-row
+        .col-md-12
+          h2.account-order__heading Order kdf24j14eq
+
+      .grid-row.cart
+        .col-md-12
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-1.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price 3
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+                
+                  
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-2.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price 1
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+                  
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-3.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price 2 
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+          
+          .grid-row.cart-footer.cart-row
+            .cart-row__borders
+            .col-md-9
+              include templates/cart-footer__order-detail
+              
+            .col-md-2.col-md-offset-1
+              include templates/cart-footer__total
+              
+          .grid-row
+            .col-md-4.col-md-push-8
+              a.btn.btn--primary(href="#") Proceed to payment
+            .col-md-4.col-md-pull-4
+              a.btn.btn--secondary(href="#") Cancel order
+            

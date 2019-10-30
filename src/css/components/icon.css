@@ -1,0 +1,220 @@
+.icon {
+
+  /* header */
+
+  &-logo {
+    width: 173px;
+    height: 59px;
+
+    &--mobile {
+      width: 113px;
+      height: 39px;
+    }
+
+    &--small {
+      width: 87px;
+      height: 40px;
+    }
+
+    &--footer {
+      width: 157px;
+      height: 53px;
+    }
+  }
+
+  &-burger-menu {
+    width: 24px;
+    height: 15px;
+  }
+
+  &-search {
+    width: 25px;
+    height: 26px;
+    fill: #fff;
+    margin-right: 16px;
+    &--mobile {
+      width: 20px;
+      height: 20px;
+      fill: #89878c;
+    }
+  }
+
+  &-account {
+    width: 22px;
+    height: 24px;
+    fill: #fff;
+    margin-right: 16px;
+
+    &--mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-cart {
+    width: 30px;
+    height: 22px;
+    fill: #fff;
+    margin-right: 14px;
+
+    &--mobile {
+      width: 27px;
+      height: 21px;
+      display: block;
+      margin-left: 15px;
+      margin-top: 19px;
+    }
+  }
+
+  &-help {
+    width: 21px;
+    height: 21px;
+  }
+
+  &-shop {
+    width: 22px;
+    height: 18px;
+  }
+
+  &-map-marker {
+    width: 16px;
+    height: 21px;
+  }
+
+  /* footer */
+
+  &-yandex-money {
+    height: 28px;
+    width: 113px;
+  }
+  &-visa {
+    height: 16px;
+    width: 48px;
+  }
+  &-master-card {
+    height: 30px;
+    width: 51px;
+  }
+
+  &-soc {
+    &-vk {
+      width: 20px;
+      height: 10px;
+      fill: #585858;
+      &:hover {
+        fill: #2fbac0;
+      }
+    }
+    &-tw {
+      width: 18px;
+      height: 14px;
+      fill: #585858;
+      &:hover {
+        fill: #2fbac0;
+      }
+      &--footer {
+        width: 28px;
+        height: 24px;
+      }
+    }
+    &-ig {
+      &--footer {
+        width: 31px;
+        height: 31px;
+      }
+    }
+    &-fb {
+      width: 10px;
+      height: 17px;
+      fill: #585858;
+      &:hover {
+        fill: #2fbac0;
+      }
+      &--footer {
+        width: 14px;
+        height: 29px;
+      }
+    }
+  }
+
+  &-subscribe {
+    width: 174px;
+    height: 174px;
+    margin: 0 auto;
+    margin-bottom: 37px;
+    margin-top: 40px;
+    display: block;
+  }
+
+  /* messages */
+
+  &-msg-success {
+    width: 174px;
+    height: 174px;
+  }
+
+  &-msg-error {
+    width: 174px;
+    height: 174px;
+  }
+
+  &-msg-empty-cart {
+    width: 174px;
+    height: 174px;
+    fill: #31b1b6;
+  }
+
+  /* common */
+
+  &-arrow-left,
+  &-arrow-right {
+    width: 10px;
+    height: 19px;
+  }
+  &-plus,
+  &-minus {
+    width: 11px;
+    height: 11px;
+  }
+  &-plus--big {
+    width: 13px;
+    height: 13px;
+    fill: #23bbc1;
+    margin-right: 13px;
+    margin-bottom: 2px;
+  }
+  &-badge {
+    width: 4px;
+    height: 15px;
+    position: absolute;
+    left:-2px;
+    top: 0;
+    &--free-shipping {
+      fill: #3bcaf3;
+    }
+    &--sale {
+      fill: #f03d56;
+    }
+    &--new {
+      fill: #28d3d9;
+    }
+    &--hit {
+      fill: #ffcb68;
+    }
+  }
+  &-cross {
+    width: 5px;
+    height: 5px;
+    margin: 0 15px;
+    flex:none;
+    &--big {
+      width: 8px;
+      height: 8px;
+      margin: 0;
+    }
+  }
+  &-pencil {
+    width: 12px;
+    height: 12px;
+  }
+}

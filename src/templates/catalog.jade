@@ -1,0 +1,155 @@
+.grid-row.filter-row
+  .col-md-12
+    button.btn.btn--sm.btn--primary.filter-toggle.js-filter-toggle.big_ninja Filters
+    .filters_block.js-filters_block
+      .filter_item.js_hasdrop.checks
+        .trigger
+          .f_value Category
+        button.filter-clear
+        .dropdown
+          .drop_content
+            .customscroll
+              ul.check_list.ul--reset
+                each item in ['Shoes', 'Socks', 'Linergie', 'Jeans', 'Coats', 'Trousers']
+                  li
+                    +checkbox('category')
+                      span.check_label_value= item
+                      
+      .filter_item.js_hasdrop.checks
+        .trigger
+          .f_value Brand
+        button.filter-clear
+        .dropdown
+          .drop_content
+            .customscroll
+              ul.check_list.ul--reset
+                each item in ['arbor', 'burton', 'capita', 'dc', 'forum', 'gnu', 'joint', 'jones', 'lib', 'lobster', 'never summer', 'slash', 'yes', 'gnu', 'joint', 'jones', 'lib', 'lobster', 'never summer', 'slash', 'yes']
+                  li
+                    +checkbox('brand')
+                      span.check_label_value= item
+
+      .filter_item.js_hasdrop.checks
+        .trigger
+          .f_value Color
+        button.filter-clear
+        .dropdown
+          .drop_content
+            .customscroll
+              ul.check_list.ul--reset
+                each item in ['red', 'blue', 'green']
+                  li
+                    +checkbox('color')
+                      span.check_label_value= item
+
+      .filter_item.js_hasdrop.checks
+        .trigger
+          .f_value Size
+        button.filter-clear
+        .dropdown
+          .drop_content
+            .customscroll
+              ul.check_list.ul--reset
+                each item in ['XXS', 'XS', 'S', 'L', 'XL', 'XXL']
+                  li
+                    +checkbox('size')
+                      span.check_label_value= item
+
+      .filter_item.price.js_hasdrop
+        .trigger
+          .f_value Price
+        button.filter-clear
+        .dropdown
+          .drop_content
+            .price_range_wrapper.js_slider_wrapper
+              .sliderConnector(data-code='price')
+              #priceSlider(data-min-val='0'  data-max-val='999' data-step='1')
+              .price_fields
+                .small_ninja From
+                .big_ninja Price from
+                input.form-input.price-input#price-from(type='text', value='0')
+                | to
+                input.form-input.price-input#price-to(type='text', value='999')
+                | N
+                  
+      button.btn.btn--primary.btn--block.filter-submit.big_ninja Filter
+      
+      button.link.filter-close.big_ninja.js-filter-toggle Close
+
+.grid-row
+  .col-md-12
+    .emx-catalog-sort
+      .filter_item.js_hasdrop.emmix--sort_filter.filter_item--sort
+        select.chosen-select.js-chosen-select.form-input(data-placeholder="Sort by")
+          // first option must be empty for placeholder
+          each option in ['','Price: high to low','Price: low to high','other option','other option']
+            option= option
+
+      .sort_text.small_ninja
+        span 185 items
+
+      .catalog_display_items.small_ninja
+        a.item.current(href='#') 20
+        a.item(href='#') 50
+        a.item(href='#') 70
+      .pagination.small_ninja
+          .pagination_arrow
+            a.pagination_arrow_link.prev(href='#')
+          .pagination_item
+            span.page.current 1
+          .pagination_item
+            a.page(href='#') 2
+          .pagination_item
+            a.page(href='#') 3
+          .pagination_item
+            span.page.dots ...
+          .pagination_item
+            a.page(href='#') 16
+          .pagination_arrow
+            a.pagination_arrow_link.next(href='#')
+          .pagination_all
+            a.page(href='#') All
+                  
+.grid-row
+  .col-md-12
+    .catalog-grid
+      each item in new Array(9)
+        .catalog-grid__item
+          include product
+      .catalog-grid__load-more-wrapper.small_ninja
+        .grid-row
+          .col-md-4.col-md-offset-4
+            a.btn.btn--secondary.catalog-grid__load-more.small_ninja(href='#') Load more
+
+.grid-row.small_ninja
+  .col-md-12
+    .emx-catalog-sort.emx-catalog-sort--bottom
+      .filter_item.js_hasdrop.emmix--sort_filter.filter_item--sort
+        select.chosen-select.js-chosen-select.form-input(data-placeholder="Sort by")
+          // first option must be empty for placeholder
+          each option in ['','Price: high to low','Price: low to high','other option','other option']
+            option= option
+
+      .sort_text
+        span 185 items
+
+      .catalog_display_items
+        a.item.current(href='#') 20
+        a.item(href='#') 50
+        a.item(href='#') 70
+      .pagination
+          .pagination_arrow
+            a.pagination_arrow_link.prev(href='#')
+          .pagination_item
+            span.page.current 1
+          .pagination_item
+            a.page(href='#') 2
+          .pagination_item
+            a.page(href='#') 3
+          .pagination_item
+            span.page.dots ...
+          .pagination_item
+            a.page(href='#') 16
+          .pagination_arrow
+            a.pagination_arrow_link.next(href='#')
+          .pagination_all
+            a.page(href='#') All

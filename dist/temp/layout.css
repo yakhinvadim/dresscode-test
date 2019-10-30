@@ -1,0 +1,98 @@
+/* ------------------------ fixed layout menu ---------------------------- */
+
+.layout_fix_nav {
+  min-width: 30px;
+  position: fixed;
+  left: 10px;
+  top: 70px;
+  background: rgba(0,0,0,.75);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.75),
+              inset 0 0 0 2px rgba(255,255,255,.65);
+  z-index: 99;
+}
+.layout_fix_nav.opened {
+  background: rgba(255,255,255,.85);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.75),
+  inset 0 0 0 2px rgba(0,0,0,.65);
+}
+.layout_fix_nav_arrows {
+  height: 30px;
+  position: relative;
+  padding: 0 10px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.layout_fix_nav_arrows:hover {
+  color: rgba(255,255,255,.55);
+}
+.layout_fix_nav.opened .layout_fix_nav_arrows {
+  opacity: .55;
+  color: #000;
+  text-shadow: 0 0 10px rgba(0,0,0,.25);
+}
+.layout_fix_nav_body {
+  display: none;
+  padding: 10px;
+}
+.layout_fix_nav_column {
+  float: left;
+  max-width: 135px;
+}
+.layout_fix_nav_column:first-child {
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid rgba(0,0,0,.05);
+}
+.layout_fix_nav a {
+  display: inline-block;
+  margin: 3px 0;
+  color: rgba(0,0,0,1);
+  font-size: 10px;
+  text-decoration: none;
+  letter-spacing: normal;
+  transition: all .45s;
+}
+.layout_fix_nav a:hover {
+  color: rgba(0,0,0,.85);
+  opacity: .85;
+  -webkit-box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.75);
+  -moz-box-shadow:    inset 0 -1px 0 0 rgba(0,0,0,.75);
+  box-shadow:         inset 0 -1px 0 0 rgba(0,0,0,.75);
+}
+.layout_fix_nav hr {
+  margin: 5px 0;
+  background: rgba(0,0,0,.15);
+  opacity: 0.45;
+}
+.layout_fix_nav a.disabled,
+.layout_fix_nav a.disabled:hover {
+  opacity: 0.55;
+  cursor: default;
+  text-decoration: none;
+}
+
+:root:root:root .components {
+  text-align: center;
+}
+
+/* UNDER DEVELOPMENT */
+.layout--under_dev {
+  opacity: .55;
+}
+
+/* HIDDEN */
+.layout-hidden {
+  display: none !important;
+}
+
+.disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+/* ------------------------ end fixed layout menu ---------------------------- */

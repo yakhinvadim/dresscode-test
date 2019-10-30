@@ -1,0 +1,120 @@
+.product {
+  position: relative;
+  &__image {
+    height: 393px;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    position: relative;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &--small &__image {
+    height: 250px;
+  }
+  &__badges {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+  &__badge {
+    position: relative;
+    margin-top: 2px;
+    font-size: 9px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding: 0 8px;
+    color: #fff;
+    text-align: right;
+    &--free-shipping {
+      background-color: #3bcaf3;
+    }
+    &--sale {
+      background-color: #f03d56;
+    }
+    &--new {
+      background-color: #28d3d9;
+    }
+    &--hit {
+      background-color: #ffcb68;
+    }
+  }
+  &__hover {
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__size-label {
+    border-bottom: 1px solid #fff;
+    width: 150px;
+    text-align: center;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+  }
+  &__sizes {
+    position: relative;
+    display: flex;
+    margin-top: 7px;
+  }
+  &__size {
+    margin: 7px;
+    font-size: 13px;
+  }
+  &__info {
+    padding: 15px 10px;
+  }
+  &--small &__info {
+    padding: 15px 0;
+  }
+  &__name {
+    font-size: 19px;
+    display: block;
+  }
+  &__description {
+    color: #4d4d4d;
+    font-size: 14px;
+    position: relative;
+    line-height: 1.2;
+  }
+  &__price {
+    font-size: 23px;
+    color: #474747;
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 8px 0 5px;
+      width: 100%;
+      background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+    }
+  }
+}
+
+.product__image:hover .product__hover {
+  visibility: visible;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .product {
+    &--small &__image {
+      height: 192px;
+    }
+  }
+}

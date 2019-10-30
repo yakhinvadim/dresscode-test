@@ -1,0 +1,9 @@
+.cart {
+  margin-bottom: 130px;
+}
+
+@media (max-width: 767px) {
+  .cart {
+    margin-bottom: 77px;
+  }
+}

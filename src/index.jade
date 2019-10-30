@@ -1,0 +1,111 @@
+extend templates/page
+
+block title
+  title Main
+
+block variables
+  - var headerType = 'big'
+
+block content
+  main
+    .slider-jumbotron.js-slider-jumbotron
+      -
+        var slides = [
+          {
+            image: 'temp/img/main-slide-1.jpg',
+            title: 'Some text just right here',
+            description: 'and the second row below, with Tommys on background'
+          },
+          {
+            image: 'temp/img/main-slide-2.jpg',
+            title: 'And some here',
+            description: 'and the second row below, with Adrians on background'
+          },
+          {
+            image: 'temp/img/main-slide-3.jpg',
+            title: 'And again!',
+            description: 'and the second row below, with Kitties on background'
+          },
+          {
+            image: 'temp/img/main-slide-4.jpg',
+            title: 'And some here',
+            description: 'with me and you on background'
+          }
+        ]
+      each slide in slides
+        a.slider-jumbotron__slide(href="#" style="background-image:url(#{slide.image});")
+          .slider-jumbotron__content
+            .slider-jumbotron__heading= slide.title
+            .slider-jumbotron__description.small_ninja= slide.description
+                
+    .grid-container
+      .grid-row.zoom-tiles
+        .col-md-4
+          a.zoom-tile.zoom-tile--man(href="#")
+            .zoom-tile__image(style="background-image: url(temp/img/category-man.jpg);")
+            .zoom-tile__text Man
+        .col-md-4
+          a.zoom-tile.zoom-tile--woman(href="#")
+            .zoom-tile__image(style="background-image: url(temp/img/category-woman.jpg);")
+            .zoom-tile__text Woman
+        .col-md-4
+          a.zoom-tile.zoom-tile--accessories(href="#")
+            .zoom-tile__image(style="background-image: url(temp/img/category-accessories.jpg);")
+            .zoom-tile__text Accessories
+              
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading New arrivals
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-products
+      
+    .slider-sale__wrapper
+      .grid-container
+        .grid-row
+          .col-md-12
+            .stripped-header.stripped-header--white
+              h3.stripped-header__heading Shoes Sale
+              .stripped-header__stripe
+          .col-md-12
+              .slider-sale.js-slider-sale
+                -
+                  var slides = [
+                    {
+                      image: 'temp/img/sticky-slide-1.jpg'
+                    },
+                    {
+                      image: 'temp/img/sticky-slide-3.jpg'
+                    },
+                    {
+                      image: 'temp/img/sticky-slide-4.jpg'
+                    },
+                    {
+                      image: 'temp/img/sticky-slide-2.jpg'
+                    },
+                    {
+                      image: 'temp/img/sticky-slide-5.jpg'
+                    },
+                    {
+                      image: 'temp/img/sticky-slide-6.jpg'
+                    }
+                  ]
+                each slide in slides
+                  a.slider-sale__slide(href="#" style="background-image:url(#{slide.image});")
+
+    .grid-container  
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading Lookbook
+            .stripped-header__stripe
+        .col-md-8.lookbook_img-wrapper
+          a(href="#")
+            img.lookbook_img(src="temp/img/lookbook-1.jpg")
+          .stripe.stripe_lookbook_img.small_ninja
+        .col-md-4
+          .lookbook_content
+            a(href="#").link.link--secondary.lookbook_title Tommy Hilfiger SS’15 look
+            p.lookbook_text "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know."
+            a.lookbook_more(href="#") read more

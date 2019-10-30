@@ -1,0 +1,39 @@
+.link {
+  color: #000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  letter-spacing: inherit;
+  &:hover {
+    color: #2fbac0;
+  }
+  &--no-color {
+    color:inherit;
+  }
+  &--primary {
+    text-decoration: underline;
+  }
+  &--secondary {
+    text-decoration: none;
+  }
+  &--styled {
+    color: #2fbac0;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration:underline;
+      color: #2fbac0;
+    }
+  }
+  &--dotted {
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+  }
+  &--centered {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+extend templates/page
+
+block title
+  title 404
+  
+block variables
+  -
+    var msg404 = '404';
+    var msgDesc = 'The page you were trying to access doesn’t exist. Try heading to our home page<br class="small_ninja"> or check whether  the address is correct. '
+    var msgBtn = 'Main page'
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          include templates/msg
+    
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading You may be interested in
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-products

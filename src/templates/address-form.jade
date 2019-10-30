@@ -1,0 +1,21 @@
+.grid-row
+  .col-md-6
+    +form-row('text', 'First name')
+  .col-md-6
+    +form-row('text', 'Last name')
+  .col-md-6
+    +form-row('tel', 'Phone')
+  .col-md-6
+    +form-row('email', 'E-mail')
+  .col-md-6
+    +form-row('text', 'Street')
+  .col-md-6
+    +form-row('text', 'Postcode')
+  .col-md-6
+    .grid-row.grid-row--tight
+      .col-xs-4
+        +form-row('text', 'Building')
+      .col-xs-4
+        +form-row('text', 'Block')
+      .col-xs-4
+        +form-row('text', 'Apt.')

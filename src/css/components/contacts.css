@@ -1,0 +1,47 @@
+.contacts {
+  padding: 30px 10px;
+  position: relative;
+  margin-bottom: 60px;
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+  }
+  &__table {
+    td {
+      padding: 5px 0;
+      vertical-align: top;
+      &:last-child {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    padding: 0 30px;
+    margin: 0 -30px 40px;
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+}

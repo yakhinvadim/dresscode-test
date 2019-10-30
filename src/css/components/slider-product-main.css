@@ -1,0 +1,25 @@
+:root .slider-product-main {
+  margin-bottom: 110px;
+  &__slide {
+    background-size: cover;
+    background-position: center;
+    height: 678px;
+  }
+  & .slick-dots {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: -50%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root .slider-product-main {
+    margin: 0 -30px;
+    &__slide {
+      background-size: cover;
+      background-position: center;
+      height: 502px;
+    }
+  }
+}

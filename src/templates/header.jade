@@ -1,0 +1,147 @@
+header.page-header  
+
+  .page-header__mobile-area.big_ninja
+    button.burger-toggle.js-burger-toggle
+    svg.icon-logo.icon-logo--mobile
+      use(xlink:href="resources/img/sprite.svg#logo")
+    a.cart-link(href="#")
+      svg.icon-cart--mobile
+        use(xlink:href="resources/img/sprite.svg#cart--mobile")
+      span.cart-counter--mobile 1
+    
+  .page-header__menu-area.small_ninja
+    .grid-container
+      .grid-row
+        .col-md-12
+          .menu-content
+            .menu-content__text Hello, Muhhamadu Buhari, your cart is waiting for 
+              a.menu-content__text-link(href='#') checkout
+            .menu-content__links
+              a.menu-content__link.js-popup(href='#popup-search')
+                svg.icon-search
+                  use(xlink:href="resources/img/sprite.svg#search")
+                | Search
+              a.menu-content__link(href='#')
+                svg.icon-account
+                  use(xlink:href="resources/img/sprite.svg#account")
+                | My account
+                // if user is not signed in, change button text to 'sign in' and show sign in popup on click
+              a.menu-content__link(href='#')
+                svg.icon-cart
+                  use(xlink:href="resources/img/sprite.svg#cart")
+                | Cart (
+                span.cart-counter--desktop 1
+                | )
+                
+  if headerType === 'big'        
+    .page-header__logo-area.small_ninja
+      a.big-logo(href="#")
+        svg.icon-logo
+          use(xlink:href="resources/img/sprite.svg#logo")
+          
+  .page-header__nav-area
+      .grid-container
+        .grid-row
+          .col-md-12
+            if headerType !== 'big'  
+              a.small-logo.small_ninja(href="#")
+                svg.icon-logo--small
+                  use(xlink:href="resources/img/sprite.svg#logo--small")
+            
+            .page-header__phone.big_ninja Phone: +23 461 555-12-12
+              
+            form.mobile-search.big_ninja
+              input.form-input(type="text" placeholder="Search in catalog")
+              button.mobile-search__submit(type="submit")
+                svg.icon-search--mobile
+                  use(xlink:href="resources/img/sprite.svg#search--mobile")
+            
+          
+            nav.navigation.navigation--primary
+              
+              .navigation__item.navigation__item--submenu.navigation__item--submenu-big
+                a.navigation__item-name.link.link--secondary(href="#") Man
+                .navigation__submenu-toggle.big_ninja
+                  .icon-plus-minus.icon-plus-minus--navigation
+                
+              .navigation__item.navigation__item--submenu.navigation__item--submenu-big
+                a.navigation__item-name.link.link--secondary(href="#") Woman
+                .navigation__submenu-toggle.big_ninja
+                  .icon-plus-minus.icon-plus-minus--navigation
+              
+              .navigation__item.navigation__item--submenu.navigation__item--submenu-big
+                a.navigation__item-name.link.link--secondary(href="#") Accessories
+                .navigation__submenu-toggle.big_ninja
+                  .icon-plus-minus.icon-plus-minus--navigation
+                .navigation__submenu
+                  -
+                    var navigationSubmenu = {
+                      'Some title':     ['Athletic Apparel', 'Maternity', 'Shorts', 'Mixed Items and Lots', 'Other Women\'s Clothing', 'Sweaters', 'Suits and Blazers'],
+                      'New collection': ['Coats and Jackets', 'Dresses', 'Pants', 'T-Shirts', 'Hosiery and Socks', 'Leggings', 'Skirts', 'Tops and Blouses'],
+                      'New & Hots':     ['Jeans', 'Sweaters', 'Suits and Blazers', 'Sweats and Hoodies', 'Intimates and Sleep and Skirts and a lot of other things', 'Jumpsuits and Rompers', 'Swimwear', 'Vests']
+                    }
+                  each links, heading in navigationSubmenu
+                    .navigation__submenu-column
+                      a.navigation__submenu-heading.link.link--secondary(href="#")= heading
+                      ul.ul--reset
+                        for link in links
+                          li
+                            a.link.link--secondary.navigation__submenu-link(href="#")= link
+                
+                
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#") Sale
+                
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#") Brands  
+              
+              .navigation__item.navigation__item--submenu.navigation__item--submenu-small
+                a.navigation__item-name.link.link--secondary(href="#") Magazine
+                .navigation__submenu-toggle.big_ninja
+                  .icon-plus-minus.icon-plus-minus--navigation
+                
+                .navigation__submenu.navigation__submenu--small
+                  ul.ul--reset
+                    for link in ['My-Shop, City', 'DressCode Show Room', 'DressCode Corner']
+                      li
+                        a.link.link--secondary.navigation__submenu-link(href="#")= link  
+            
+            nav.navigation.navigation--secondary.big_ninja
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#")
+                  .navigation__icon-wrapper
+                    svg.icon-account--mobile
+                      use(xlink:href="resources/img/sprite.svg#account--mobile")
+                  | My account
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#") 
+                  .navigation__icon-wrapper
+                    svg.icon-help
+                      use(xlink:href="resources/img/sprite.svg#help")
+                  | Help
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#") 
+                  .navigation__icon-wrapper
+                    svg.icon-shop
+                      use(xlink:href="resources/img/sprite.svg#shop")
+                  | Shops
+              .navigation__item.navigation__item--link
+                a.navigation__item-name.link.link--secondary(href="#") 
+                  .navigation__icon-wrapper
+                    svg.icon-map-marker
+                      use(xlink:href="resources/img/sprite.svg#map-marker")
+                  | Contacts
+                  
+  #popup-search.popup.mfp-hide
+    .grid-container
+      .grid-row
+        .col-md-8.col-md-offset-2
+          .popup__inner
+            button.mfp-close
+            
+            form(action="")
+              .form-row.form-row--no-margin-bottom.search-form
+                input.form-input.form-input--lg.form-input--inline.search-form__input(type="text", placeholder="Search in catalog")
+                button.btn.btn--primary.btn--inline.btn--no-margin-bottom.search-form__submit.small_ninja(type="submit") Search
+                button.search-form__mobile-submit.big_ninja
+                  

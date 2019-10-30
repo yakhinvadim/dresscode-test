@@ -1,0 +1,83 @@
+extend templates/page
+
+block title
+  title Profile
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Profile
+          
+      .grid-row
+        .col-md-8.col-md-offset-2
+          ul.account-menu.ul--reset
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Settings
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Orders history
+            li.account-menu__item.account-menu__item--current
+              a.account-menu__link.link.link--secondary(href="#") Favorite
+
+      .grid-row.cart.account-favorite
+        .col-md-12
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-1.jpg", alt="")
+            .col-md-4
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-2
+              .cart-item__size Size: L
+            .col-md-2
+              .cart-item__price N 375
+            .col-md-2
+              button.btn.btn--primary.btn--no-margin-bottom.account-favorite__add-to-cart Add to cart
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+                
+                  
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-2.jpg", alt="")
+            .col-md-4
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-2 
+            .col-md-2
+              .cart-item__price N 375
+            .col-md-2
+              button.btn.btn--primary.btn--no-margin-bottom.account-favorite__add-to-cart Add to cart
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+                  
+          .grid-row.cart-item.cart-item--not-available.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-3.jpg", alt="")
+            .col-md-4
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-2
+              .cart-item__size Size: M
+            .col-md-2
+              .cart-item__price Not available
+            .col-md-2
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+            

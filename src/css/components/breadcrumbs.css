@@ -1,0 +1,31 @@
+.breadcrumbs {
+  margin-right: 28px;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    &:after {
+      content: '';
+      width: 32px;
+      height: 5px;
+      margin: 0 15px;
+      background-image: svg('breadcrumbs-separator');
+      align-self: center;
+      display: block;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+  &__link {
+    font-size: 20px;
+    line-height: 24px;
+    &--current {
+      font-size: 26px;
+      text-transform: uppercase;
+      color: #474747;
+    }
+  }
+}

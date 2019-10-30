@@ -1,0 +1,6 @@
+.blog {
+  margin-bottom: 90px;
+  &__load-more {
+    margin-top: 45px;
+  }
+}

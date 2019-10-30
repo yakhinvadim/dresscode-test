@@ -1,0 +1,47 @@
+:root .slider-jumbotron {
+  margin-bottom: 49px;
+  &__slide {
+    display: flex;
+    height: 470px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    align-items: center;
+  }
+  &--shop &__slide {
+    height: 600px;
+  }
+  &__content {
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 25px 30px;
+    background-color: rgba(28, 24, 22, 0.8);
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    flex: 0 1 auto;
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: 600;
+  }
+  &__description {
+    margin-top: -9px;
+    font-size: 18px;
+  }
+  & .slick-dots {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: -50%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root .slider-jumbotron {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+        
+    block title
+        
+    meta(name="tagline", content="kodix.ru")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="icon", href="resources/img/favicon.ico", type="image/vnd.microsoft.icon")
+    link(rel="icon", href="resources/img/favicon.png", type="image/png")
+    link(rel="apple-touch-icon", href="resources/img/apple-touch-icon.png")
+    
+    link(rel="stylesheet", href="temp/layout.css")
+    link(rel="stylesheet", href="resources/css/style.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic", type="text/css")
+      
+  body
+    
+    block variables 
+    include mixins
+    
+    include header
+    
+    block content
+    
+    include footer
+    
+    script(src="resources/js/jquery-2.1.4.min.js")
+    
+    script(src="resources/js/libraries.js")
+    script(src="resources/js/main.js")
+      
+    script(src="resources/js/config-mCustomScrollbar.js")
+      
+    script(src="temp/layout.js")
+
+    //- block for additional scripts on certain pages
+    block scripts

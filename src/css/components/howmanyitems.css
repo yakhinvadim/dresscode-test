@@ -1,0 +1,66 @@
+.howmanyitems {
+  display: inline-block;
+  position: relative;
+  width: 83px;
+  height: 33px;
+  padding: 0 25px;
+  vertical-align: top;
+  line-height: 31px;
+}
+.howmanyitems input {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  line-height: 31px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+.howmanyitems .ui-spinner-button {
+  width: 25px;
+  height: 33px;
+  position: absolute;
+  left: 1px;
+  top: 0;
+  box-shadow: inset 0 0 0 1px #e6e6e6;
+  cursor: pointer;
+}
+.howmanyitems .ui-spinner-button.ui-spinner-up {
+  right: 1px;
+  left: auto;
+}
+.howmanyitems .ui-spinner-button.ui-spinner-up:before,
+.howmanyitems .ui-spinner-button.ui-spinner-up:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 9px;
+    top: 16px;
+    background: #000;
+    width: 7px;
+    height: 1px;
+}
+.howmanyitems .ui-spinner-button.ui-spinner-up:after {
+    width: 1px;
+    height: 7px;
+    top: 13px;
+    right: 12px;
+}
+
+.howmanyitems .ui-spinner-button.ui-spinner-down:before,
+.howmanyitems .ui-spinner-button.ui-spinner-down:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 16px;
+    background: #000;
+    width: 7px;
+    height: 1px;
+}
+.howmanyitems .ui-button-text {
+    display: none;
+}

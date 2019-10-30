@@ -1,0 +1,16 @@
+extend templates/page
+
+block title
+  title Brand
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          .brand__image(style="background-image: url('temp/img/main-slide-1.jpg');")
+          h1.page-heading Brand
+          .brand__text
+            p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth. Denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      
+      include templates/catalog

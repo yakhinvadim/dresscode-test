@@ -1,0 +1,29 @@
+.msg {
+  margin: 111px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__404 {
+    font-size: 180px;
+    line-height: 1;
+    font-family: 'FuturaBT Medium';
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    line-height: 1;
+    text-align: center;
+  }
+  &__desc {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .msg {
+    &__404 {
+      font-size: 160px;
+    }
+  }
+}

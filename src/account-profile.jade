@@ -1,0 +1,92 @@
+extend templates/page
+
+block title
+  title Profile
+
+block content
+  main  
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Profile
+      .grid-row
+        .col-md-8.col-md-offset-2
+          ul.account-menu.ul--reset
+            li.account-menu__item.account-menu__item--current
+              a.account-menu__link.link.link--secondary(href="#") Settings
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Orders history
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Favorite
+              
+      .grid-row
+        form.account-profile__form.col-md-6
+          .grid-row
+            
+            .col-md-6
+                h4.account-profile__section-heading Information
+                .form-row
+                  input.form-input(type="text",  placeholder="First name", value="John")
+                  .form-row__error Error text
+                .form-row
+                  input.form-input(type="text",  placeholder="Фамилия", value="Иванов")
+                  .form-row__error Error text
+                .form-row
+                  input.form-input(type="tel", placeholder="Телефон", value="+7 903 238-48-28")
+                  .form-row__error Error text
+                .form-row
+                  input.form-input(type="email", placeholder="E-mail", value="lolwhat@gmail.com")
+                  .form-row__error Error text
+
+            .col-md-6
+                h4.account-profile__section-heading Change password
+                .form-row
+                  input.form-input(type="password",  placeholder="Old password")
+                  .form-row__error Error text
+                .form-row
+                  input.form-input(type="password", placeholder="New password")
+                  .form-row__error Error text
+                .form-row
+                  input.form-input(type="password", placeholder="Confirm password")
+                  .form-row__error Error text
+          
+          .grid-row
+            .col-md-6.col-md-offset-3
+              button.btn.btn--primary.account-profile__button(type="submit") Save changes
+          .grid-row
+            .col-md-2.col-md-offset-5
+              a.link.link--primary.link--centered(href="#") Sign out
+        
+        form.account-profile__form.col-md-6
+          h4.account-profile__section-heading Delivery address
+          .grid-row
+            .col-md-8
+              .form-row.js_address-select.address-select
+                -
+                  var addresses = [
+                    '1 Orleans St SE Apt 4, Atlanta, Georgia, USA',
+                    '2 Orleans St SE Apt 4, Atlanta, Georgia, USA',
+                    '3 Orleans St SE Apt 4, Atlanta, Georgia, USA, Apt 4, Atlanta, Georgia, USA'
+                  ]
+                select.chosen-select.addr-chosen-select.form-input
+                  // first option must be empty for placeholder
+                  each option in addresses
+                    option= option
+                  
+            .col-md-4
+              .address-actions
+                button.btn.btn--link.btn--inline.btn--no-margin-bottom.big_ninja Edit address
+                button.btn.btn--link.btn--inline.btn--no-margin-bottom.address-actions__edit
+                  svg.icon-plus--big.small_ninja
+                    use(xlink:href="resources/img/sprite.svg#plus")
+                  | New address
+          h5 Editing address
+          include templates/address-form
+          .grid-row
+            .col-md-6.col-md-offset-3
+              button.btn.btn--primary.account-profile__button(type="submit") Save
+          .grid-row
+            .col-md-12
+              .address-actions
+                button.btn.btn--link.btn--inline.btn--no-margin-bottom Cancel
+                button.btn.btn--link.btn--inline.btn--no-margin-bottom.big_ninja Delete

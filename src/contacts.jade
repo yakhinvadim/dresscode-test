@@ -1,0 +1,45 @@
+extend templates/page
+block title
+  title Contacts
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Contacts
+      .grid-row
+        .col-md-6.col-md-offset-3
+          .contacts.contacts--bordered
+            table.contacts__table
+              tbody
+                tr
+                  td Address:
+                  td 
+                    | 31/F, Chinachem Century Tower, 178 Gloucester Road, Wanchai, Hong Kong
+                    br
+                    a.link.big_ninja.js-popup-map(href="#popup-map")
+                      | Show on map
+                tr
+                  td Phone:
+                  td
+                    a.link(href="tel:+314925551212")
+                      | +31 492 555-12-12
+                tr
+                  td E-mail:
+                  td
+                    a.link(href="mailto:shop@dresscode.org")
+                      | shop@dresscode.org
+                      
+    #map-desktop.small_ninja
+      
+    #popup-map.popup.mfp-hide
+      .grid-container
+        .grid-row
+          .col-md-12
+            .popup__inner
+              button.mfp-close
+              #map-mobile
+    
+      
+block scripts
+  script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZEZjhtj7fIdIyQwCwn_TKR-JuvP6oYu0&callback=initMap')

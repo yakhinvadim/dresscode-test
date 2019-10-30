@@ -1,0 +1,118 @@
+footer.page-footer
+  .footer_main
+    .grid-container
+      .grid-row.footer_mobile_row
+        .col-xs-12.big_ninja
+          a.btn.btn--primary.btn--md.js-popup(href="#popup-subscribe") Subscribe us
+      .grid-row.footer_first_row
+        
+        .col-md-5.small_ninja
+          svg.icon-logo--footer
+            use(xlink:href="resources/img/sprite.svg#logo")
+          p.footer_about "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+        
+        .col-md-2.small_ninja
+          a.footer_list_title.link.link--secondary(href="#") Man
+          ul.ul--reset.footer_list
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Shoes
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Pants
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Jeans
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Vests
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Jackets
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Polo shirts
+        
+        .col-md-2.small_ninja
+          a.footer_list_title.link.link--secondary(href="#") Woman
+          ul.ul--reset.footer_list
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Shoes
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Pants
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Jeans
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Vests
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Jackets
+            li.footer_list_item
+              a.footer_list_item_link.link.link--secondary(href='#') Polo shirts
+        
+        .col-md-2.small_ninja
+          ul.ul--reset.footer_list_big
+            li.footer_list_big_item
+              a.footer_list_big_item_link.link.link--secondary(href='#') Accessories
+            li.footer_list_big_item
+              a.footer_list_big_item_link.link.link--secondary(href='#') Sale
+            li.footer_list_big_item
+              a.footer_list_big_item_link.link.link--secondary(href='#') Brands
+            li.footer_list_big_item
+              a.footer_list_big_item_link.link.link--secondary(href='#') Magazine
+        
+        .col-md-1
+          .social_icon
+            
+            a.social_icon_item(href='#')
+              svg.social_icon_icon.icon-soc-tw--footer
+                use(xlink:href="resources/img/sprite.svg#soc-tw")
+            a.social_icon_item(href='#')
+              svg.social_icon_icon.icon-soc-ig--footer
+                use(xlink:href="resources/img/sprite.svg#soc-ig")
+            a.social_icon_item(href='#')
+              svg.social_icon_icon.icon-soc-fb--footer
+                use(xlink:href="resources/img/sprite.svg#soc-fb")
+              
+      .grid-row.footer_second_row.small_ninja
+        
+        .col-md-3
+          .footer_info_con
+            .footer_info_phone phone: 
+              a.link.link--secondary(href='tel:+2345551212') +234 555 1212
+            .footer_info_email e-mail: 
+              a.link.link--secondary(href='mailto:shop@dresscode.org') shop@dresscode.org
+              
+        .col-md-4
+          .footer_info_pay
+            svg.icon-yandex-money.pay_item
+              use(xlink:href="resources/img/sprite.svg#yandex-money")
+            svg.icon-visa.pay_item
+              use(xlink:href="resources/img/sprite.svg#visa")
+            svg.icon-master-card.pay_item
+              use(xlink:href="resources/img/sprite.svg#master-card")
+        
+        .col-md-5
+          form(action="")
+            .form-row.form-row--no-margin-bottom.subscribe-form
+              label.subscribe-form__label Subscribe us: 
+                input.form-input.form-input--inline.form-input--lg.subscribe-form__input(type="text", placeholder="Your e-mail")
+              button.btn.btn--primary.btn--inline.btn--no-margin-bottom.subscribe-form__submit(type="submit") Subscribe
+              .form-row__error.subscribe-form__message Error text
+              .form-row__success.subscribe-form__message Success text
+                
+  .footer_bottom
+    .grid-container
+      .grid-row.small_ninja
+        .col-md-12
+          .simple_footer
+            .simple_footer_copyright © 2015 Dresscode
+            .simple_footer_made Made in
+              a.kodix(href='http://kodix.ru/') Kodix
+  a.link.link--secondary.link-to-desktop.big_ninja(href="#") Go to full site
+  
+  #popup-subscribe.popup.mfp-hide
+    .grid-container
+      .grid-row
+        .col-md-4.col-md-offset-4
+          .popup__inner.popup__inner--padding
+            button.mfp-close
+            svg(class="icon-subscribe")
+              use(xlink:href="resources/img/sprite.svg#subscribe")
+            h2.popup__heading Subscribe us
+            form(action="")
+              +form-row('email', 'Your e-mail')
+              button.btn.btn--primary.btn--big-margin-top Subscribe

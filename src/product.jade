@@ -1,0 +1,89 @@
+extend templates/page
+
+block title
+  title Product page
+
+block content
+  main
+    .grid-container
+      .grid-row.small_ninja
+        .col-md-12
+          .stripped-header.stripped-header--breadcrumbs
+            .breadcrumbs
+              ul.breadcrumbs__list.ul--reset
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary(href="#") Store
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary(href="#") Man
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary.breadcrumbs__link--current(href="#") T-shorts
+            .stripped-header__stripe
+          
+      .grid-row
+        
+        .col-md-1.small_ninja
+          .slider-product-thumb.js-slider-product-thumb
+            each item in new Array(10)
+              .slider-product-thumb__slide(style="background-image: url('temp/img/product-small-2.jpg');")
+          
+        .col-md-5 
+          .slider-product-main.js-slider-product-main
+            each item in new Array(10)
+              .slider-product-main__slide(style="background-image: url('temp/img/product-big-1.jpg');")
+                  
+        .col-md-6
+          .product-info
+          
+            .product-info__row
+              h1.product-info__title Moss Parka Forest
+              a.product-info__brand.link.link--styled(href="#") Brand: Garbstore 
+              .product-info__price N280
+                span.price__old N360
+              .product-info__article Article: 124UDK65GH
+              
+              
+            // if product is unavailable, the row below should be removed or hidden 
+            .product-info__row.product-info__row--sizes
+                .size-selector
+                  .size-selector__label Size:
+                  .size-selector__sizes
+                    button.size-selector__size s
+                    button.size-selector__size.size-selector__size--current m
+                    button.size-selector__size l
+                    button.size-selector__size xl
+                    button.size-selector__size.size-selector__size--disabled xxl
+                a.link(href="#") Size guide
+                
+            // if product is unavailable, the row below should be removed or hidden 
+            .product-info__row
+              .grid-row
+                .col-md-7
+                  button.btn.btn--primary.btn--lg.btn--no-margin-bottom.btn--add-to-cart add to cart
+                .col-md-5
+                  // remove class ".favorite-toggle--is-favorite" to get "add to favorite" icon
+                  .link.favorite-toggle.favorite-toggle--is-favorite Remove from wishlist
+            
+            // if product is unavailable, the row below should be displayed
+            .product-info__row.hidden
+              .grid-row
+                .col-md-7
+                  button.btn.btn--primary.btn--lg.btn--no-margin-bottom.btn--not-available not available
+            
+            .product-info__row.product-info__row--accordion
+              include templates/accordion
+      
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading You may be interested in
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-products
+          
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading Last viewed items
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-last-viewed

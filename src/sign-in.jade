@@ -1,0 +1,53 @@
+extend templates/page
+
+block title
+  title Sign in
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Sign In
+          // popup trigger. remove it from this page
+          a.js-popup(href="#popup-sign-in")
+            mark sign-in popup trigger
+
+      .grid-row
+        .col-md-4.col-md-offset-4
+          form.authorization-form(action="")
+            +form-row('email', 'E-mail')
+            +form-row('password', 'Password')
+            //- grid-row prevents margins overflow of sign-in-actions block
+            .grid-row 
+              .col-md-12
+                .sign-in-actions
+                  +checkbox('remember-user', 'checked')(class="checkbox--no-margin-bottom")
+                    span.checkbox__label Remember me
+                  a.link(href="#") Forgot password
+            button.btn.btn--primary.btn--small-margin-top Sign in
+            div Not a member? 
+              a.link(href="#") Sign up
+              
+              
+    #popup-sign-in.popup.mfp-hide
+      .grid-container
+        .grid-row
+          .col-md-4.col-md-offset-4
+            .popup__inner.popup__inner--padding
+              button.mfp-close
+              h2.popup__heading Sign in
+              // below is the same form as on page
+              form.authorization-form(action="")
+                +form-row('email', 'E-mail')
+                +form-row('password', 'Password')
+                //- grid-row prevents margins overflow of sign-in-actions block
+                .grid-row 
+                  .col-md-12
+                    .sign-in-actions
+                      +checkbox('remember-user', 'checked')(class="checkbox--no-margin-bottom")
+                        span.checkbox__label Remember me
+                      a.link(href="#") Forgot password
+                button.btn.btn--primary.btn--small-margin-top Sign in
+                div Not a member? 
+                  a.link(href="#") Sign up

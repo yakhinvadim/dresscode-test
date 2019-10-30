@@ -1,0 +1,162 @@
+extend templates/page
+
+block title
+  title components
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Components                      
+      
+      .grid-row
+        .col-md-3
+          h4 form elements
+          .form-row
+            input.form-input(type="text", placeholder="Placeholder")
+            .form-row__error Error text
+          .form-row
+            input.form-input(type="text", placeholder="placeholder", value="Input")
+            .form-row__error Error text
+          .form-row
+            input.form-input(type="text", placeholder="placeholder", value="Check focus here")
+            .form-row__error Error text
+          .form-row.error
+            input.form-input(type="text", placeholder="placeholder", value="Error")
+            .form-row__error Error text
+          .form-row.success
+            input.form-input(type="text", placeholder="Placeholder")
+            .form-row__success Success text
+          .form-row
+            input.form-input(type="text", placeholder="placeholder", value="Disabled", disabled)
+            .form-row__error Error text
+            
+        .col-md-3
+          h4 checkboxes
+          +checkbox('checkbox-1')
+            | checkbox
+          +checkbox('checkbox-1', '', 'disabled')
+            | checkbox disabled
+          +checkbox('checkbox-1').error
+            | checkbox error
+          +checkbox('checkbox-1', 'checked')
+            | checkbox checked 
+          +checkbox('checkbox-1', 'checked', 'disabled')
+            | checkbox checked disabled
+          +checkbox('checkbox-1', 'checked').error
+            | checkbox checked error
+          
+        .col-md-3
+          h4 radio
+          +radio('radio-1')
+            | radio
+          +radio('radio-2', '', 'disabled')
+            | radio disabled
+          +radio('radio-3').error
+            | radio error
+          +radio('radio-1', 'checked')
+            | radio checked
+          +radio('radio-2', 'checked', 'disabled')
+            | radio checked disabled
+          +radio('radio-3', 'checked').error
+            | radio checked error
+          
+        .col-md-3
+          h4 links
+          a(href="#") html link
+          br
+          a.link(href="#") class link
+          br
+          a.link.link--secondary(href="#") class link secondary
+          br
+          a.link.link--styled(href="#") class link styled
+          br
+          a.link.link--dotted(href="#") class link dotted
+        
+      .grid-row
+        
+        .col-md-3
+          h4 buttons
+          h5 actionable buttons
+          button.btn.btn--primary normal btn
+          button.btn.btn--primary.btn--sm small btn
+          button.btn.btn--primary.btn--lg large btn
+          button.btn.btn--secondary Load more
+          h5 Info buttons
+          button.btn.btn--primary.btn--added Added to cart
+          button.btn.btn--primary.btn--error Error
+          button.btn.btn--primary.btn--not-available Not available
+            
+        .col-md-3
+          h4 product
+          include templates/product
+          
+        .col-md-6
+          h4 accordion
+          include templates/accordion
+          
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading products slider
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-products
+      
+      .grid-row
+        .col-md-4
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          h4 Heading 4
+          h5 Heading 5
+          h6 Heading 6
+        .col-md-8
+          h1 Heading 1
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          h2 Heading 2
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          h3 Heading 3
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          h4 Heading 4
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          h5 Heading 5
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          h6 Heading 6
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          ul
+            li But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+            li Born and I will give you; 
+            li Born and I will give you; 
+            li Born and I will give you;
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      .grid-row
+        .col-md-12
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      .grid-row
+        .col-md-6
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-6
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      .grid-row
+        .col-md-4
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-4
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-4
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      .grid-row
+        .col-md-3
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-3
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-3
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+        .col-md-3
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+      
+    
+    
+    

@@ -1,0 +1,288 @@
+.filters_block {
+  padding: 25px 13px;
+  margin: 0;
+  background-color: #dfdfdf;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+.filter_item {
+  flex: 1;
+  height: 34px;
+  position: relative;
+  margin: 0 12px;
+  min-width: 0;/* prevents bug in firefox*/
+  &--sort {
+    margin: 0;
+    flex: none;
+    width: 179px;
+    height: 52px;
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+    }
+  }
+}
+.filter_item .trigger {
+  width: auto;
+  background: #fff;
+  border-radius: 3px;
+  height: 35px;
+  position: relative;
+  padding: 0 35px 0 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+.filter_item--sort .trigger {
+  height: 52px;
+}
+.filter_item .trigger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #3f3f3f;
+  border-bottom: 0 solid #3f3f3f;
+}
+.filter_item.active .trigger:after {
+  border-width: 0 4px 5px;
+}
+
+.filter_item.current .trigger:after {
+  display: none;
+}
+
+.filter-clear {
+  display: none;
+  background-image: svg('cross');
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-size: 8px 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.filter_item.current .filter-clear {
+  display: block;
+}
+
+.filter_item .f_value {
+  line-height: 34px;
+  color: #000;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.filter_item--sort .f_value {
+  line-height: 52px;
+  color: #999999;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.filter_item .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  margin-top: 1px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #e8e8e8;
+  z-index: 3;
+}
+
+.filter_item.current .trigger{
+  box-shadow: 0 0 0 1px #39ced5;
+}
+
+/*** drops ***/
+
+.customscroll {
+  max-height: 320px;
+}
+.dropdown {
+  display: block;
+  min-width: 100%;
+  padding: 0;
+  overflow: hidden;
+  height: 0;
+}
+.js_hasdrop.active .dropdown {
+  overflow: visible;
+}
+.drop_content {
+  display: block;
+}
+.dropdown .check_list li + li {
+  margin-top: 15px;
+}
+.quick_text .dropdown .check_list .current {
+  font-weight: 600;
+}
+
+ul.check_list {
+  padding: 19px 0 4px 14px;
+}
+
+/* price range */
+
+.price_range_wrapper {
+  margin: 36px 15px 30px;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+.price_range_wrapper .price_fields {
+  margin: 20px 0 3px;
+  line-height: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.price_item {
+  display: inline-block;
+}
+
+/* range slider */
+
+.range_slider_input {
+  float: left;
+  & .primary_input {
+    width: 50px;
+  }
+}
+:root .price-input {
+  width: 45px;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.emmix--sort_filter {
+  margin: 0;
+  position: relative;
+  & input[type="radio"] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -999px;
+  }
+}
+.filter_item .label_value {
+  display: inline-block;
+  margin: 3px;
+  transition: all .55s;
+  line-height: 1;
+  &:hover {
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* need to add custom scroll in dropdown, then remove dat rules */
+
+.js_hasdrop.active .dropdown {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .emx-catalog-sort {
+    border-bottom: none;
+    height: 0;
+    margin-bottom: 0;
+  }
+  .emmix--sort_filter {
+    position: absolute;
+    top: -61px;
+    width: calc(50% - 42px);
+  }
+  .emx-catalog-filters {
+    padding: 30px;
+  }
+  .filters_block {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 60px;
+    padding: 0;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    .filter_item {
+      width: calc(100% - 60px);
+      margin: 0 30px 15px;
+    }
+    .filter_item:first-child {
+      margin-top: 24px;
+    }
+  }
+  :root .filter-toggle {
+    margin-left: calc(50% + 15px);
+    width: calc(50% - 15px);
+    font-size: 14px;
+  }
+  .filter-row {
+    background-color: #f1f1f1;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .filter-submit {
+    margin: 0 30px 10px;
+    width: calc(100% - 60px);
+    height: 44px;
+    line-height: 44px;
+  }
+  .filter-close {
+    margin: 0 30px;
+    width: calc(100% - 60px);
+    margin-bottom: 18px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+  }
+  .filter_item--sort:after {
+    display: none;
+  }
+  :root .filter_item--sort {
+    height: 36px;
+    font-size: 14px;
+    .trigger {
+      height: 34px;
+    }
+    .f_value {
+      height: 34px;
+      line-height: 34px;
+    }
+  }
+  .price-input {
+    width: 66px;
+  }
+}

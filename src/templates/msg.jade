@@ -1,0 +1,11 @@
+.msg
+  if msgIcon
+    svg(class="icon-#{msgIcon}")
+      use(xlink:href="resources/img/sprite.svg##{msgIcon}")
+  if msg404
+    .msg__404!= msg404
+  if msgTitle
+    h4.msg__title!= msgTitle
+  if msgDesc
+    .msg__desc!= msgDesc
+  a.btn.btn--primary.btn--msg!= msgBtn

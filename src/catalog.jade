@@ -1,0 +1,73 @@
+extend templates/page
+
+block title
+  title Catalog
+  
+block content
+  main
+    .grid-container
+      
+      .grid-row.big_ninja
+        .col-md-12
+          h1.page-heading T-shorts  
+          
+      .grid-row.small_ninja
+        .col-md-12
+          .stripped-header.stripped-header--breadcrumbs
+            .breadcrumbs
+              ul.breadcrumbs__list.ul--reset
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary(href="#") Store
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary(href="#") Man
+                li.breadcrumbs__item 
+                  a.breadcrumbs__link.link.link--secondary.breadcrumbs__link--current(href="#") T-shorts
+            .stripped-header__stripe
+          
+      include templates/catalog
+                  
+      .grid-row.small_ninja
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading News
+            .stripped-header__stripe
+        -
+          var array = [
+            {
+              heading: 'Dresscode',
+              image:   'temp/img/news-1.jpg',
+              summary: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising.'
+            },
+            {
+              heading: 'New Adidas Collection',
+              image:   'temp/img/news-2.jpg',
+              summary: 'No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know.'
+            },
+            {
+              heading: 'Shoes Sale',
+              image:   'temp/img/news-3.jpg',
+              summary: 'Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.'
+            }
+          ]
+        each object in array
+          .col-md-4
+            .news
+              h4.news__heading
+                a.link.link--secondary.link--no-color(href="#")= object.heading
+              a(href="#")
+                img.news__image(src="#{object.image}", alt="")
+              .news__summary
+                p= object.summary
+              a.link(href="#") read more
+      .grid-row.online-shopping.small_ninja
+        .col-md-12
+          .stripped-header.stripped-header--primary
+            h3.stripped-header__heading Online Shopping in Dresscode
+            .stripped-header__stripe
+        .col-md-6
+          p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. 
+        .col-md-6
+          p Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+          
+            
+   

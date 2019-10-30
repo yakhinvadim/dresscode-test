@@ -1,0 +1,24 @@
+.accordion
+  -
+    var array = [
+      {
+        title: 'Desciption',
+        content: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.'
+      },
+      {
+        title: 'Desciption',
+        content: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.',
+        isOpened: true
+      },
+      {
+        title: 'Desciption',
+        content: '<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.</p><p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.</p>'
+      }
+    ]  
+  
+  each item in array
+    - var openedClass = item.isOpened ? 'accordion__item--opened' : null
+      
+    .accordion__item.js-accordion__item(class=openedClass)
+      .accordion__title.js-accordion__title= item.title
+      .accordion__content.js-accordion__content!= item.content

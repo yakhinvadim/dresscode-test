@@ -1,0 +1,32 @@
+extend templates/page
+
+block title
+  title Empty search
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Search
+          
+      .grid-row
+        .col-md-8.col-md-offset-2
+          .search-message 
+            | No results for 
+            span.search-message__query Nik
+            | . Try again.
+          form(action="")
+            .form-row.form-row--no-margin-bottom.search-form
+              input.form-input.form-input--lg.form-input--inline.search-form__input(type="text", placeholder="Search in catalog")
+              button.btn.btn--primary.btn--inline.btn--no-margin-bottom.search-form__submit.small_ninja(type="submit") Search
+              button.search-form__mobile-submit.big_ninja
+                
+      .grid-row
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading You may be interested in
+            .stripped-header__stripe.stripped-header__stripe--slider
+        .col-md-12
+          include templates/slider-products
+        

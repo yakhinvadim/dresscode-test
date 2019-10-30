@@ -1,0 +1,34 @@
+.slider-sale {
+  margin-top: 35px;
+  &__wrapper {
+    background-color: #404040;
+    padding-top: 60px;
+    padding-bottom: 85px;
+    margin-bottom: 95px;
+  }
+  &__slide {
+    height: 394px;
+    background-size: cover;
+    background-position: center;
+  }
+  & .slick-dots {
+    bottom: -57px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: -50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-sale {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    &__wrapper {
+      margin-bottom: 70px;
+    }
+    &__slide {
+      height: 290px;
+    }
+  }
+}

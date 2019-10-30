@@ -1,0 +1,129 @@
+extend templates/page
+
+block title
+  title Shopping cart
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Shopping cart
+
+      .grid-row.cart
+        .col-md-12
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-1.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter
+                .howmanyitems
+                  input.primary_input.js_spinner(type="text", value="3")
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+                  
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-2.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter
+                .howmanyitems
+                  input.primary_input.js_spinner(type="text", value="3")
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+                  
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-1
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-3.jpg", alt="")
+            .col-md-5
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter
+                .howmanyitems
+                  input.primary_input.js_spinner(type="text", value="3")
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+                
+            .col-md-1
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+            button.cart-item__delete
+              svg.icon-cross.icon-cross--big
+                use(xlink:href="resources/img/sprite.svg#cross")
+          
+          .grid-row.cart-footer.cart-row
+            .cart-row__borders
+            .col-md-6
+              .grid-row
+                .col-md-8
+                  form(action="")
+                    .form-row.form-row--no-margin-bottom.promo-form
+                      input.form-input.form-input--inline.promo-form__input(type="text", placeholder="Discount code")
+                      button.btn.btn--primary.btn--inline.btn--sm.btn--no-margin-bottom.promo-form__submit(type="submit") Apply
+                      .form-row__error.promo-form__message Error text
+                      .form-row__success.promo-form__message Success text
+              
+              
+              .promo-codes
+                .promo-codes__heading Applied discount codes:
+                .promo-codes__item
+                  .promo-codes__code
+                    div DBD621-SAS
+                    div Discount N40
+                  .promo-codes__description But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth
+                  .promo-codes__error I will give you a complete account of the system you a complete account of the system you a complete account of the system
+                .promo-codes__item
+                  .promo-codes__code
+                    div DBD621-SAS
+                    div Discount N40
+                  .promo-codes__description But I must explain to you how all 
+              
+              
+            .col-md-2.col-md-offset-4
+              include templates/cart-footer__total
+              
+          .grid-row
+            .col-md-4.col-md-offset-8
+              a.btn.btn--primary(href="#") Proceed to checkout

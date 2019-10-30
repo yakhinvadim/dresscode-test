@@ -1,0 +1,35 @@
+mixin checkbox(name, checked, disabled)
+  label.checkbox(class!=attributes.class)
+    if checked && disabled
+      input.checkbox__input(type="checkbox", name="#{name}", checked, disabled)
+    else if disabled
+      input.checkbox__input(type="checkbox", name="#{name}", disabled)
+    else if checked
+      input.checkbox__input(type="checkbox", name="#{name}", checked)
+    else
+      input.checkbox__input(type="checkbox", name="#{name}")
+        
+    .checkbox__icon
+      
+    block
+    
+mixin radio(name, checked, disabled)
+  label.radio(class!=attributes.class)
+    if checked && disabled
+      input.radio__input(type="radio", name="#{name}", checked, disabled)
+    else if disabled
+      input.radio__input(type="radio", name="#{name}", disabled)
+    else if checked
+      input.radio__input(type="radio", name="#{name}", checked)
+    else
+      input.radio__input(type="radio", name="#{name}")
+        
+    .radio__icon
+      
+    block
+      
+mixin form-row(type, placeholder)
+  .form-row
+    input.form-input(type="#{type}", placeholder="#{placeholder}")
+    .form-row__error Error text
+    block

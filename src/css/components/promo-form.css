@@ -1,0 +1,14 @@
+.promo-form {
+  display: flex;
+  flex-wrap: wrap;
+  &__input {
+    margin-right: -5px;
+    flex:1;
+  }
+  &__submit {
+    min-width: 98px;
+  }
+  &__message {
+    flex:100%;
+  }
+}

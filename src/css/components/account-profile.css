@@ -1,0 +1,20 @@
+.account-profile {
+  &__section-heading {
+    margin: 20px 0;
+  }
+  &__button {
+    margin-top: 22px;
+  }
+  &__form {
+    margin-bottom: 100px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .account-profile {
+    &__form {
+      margin-bottom: 50px;
+    }
+  }
+}

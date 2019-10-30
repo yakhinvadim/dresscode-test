@@ -1,0 +1,9 @@
+.news-list {
+  margin-top: 62px;
+}
+
+@media (max-width: 767px) {
+  .news-list {
+    margin-top: 48px;
+  }
+}

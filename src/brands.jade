@@ -1,0 +1,49 @@
+extend templates/page
+block title
+    title Brands
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Brands
+      .grid-row.small_ninja
+        .col-md-12
+          .brands__alphabet
+            each letter in ['a','b','c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'r', 's','#']
+              a.brands__small-letter.link.link--secondary(href="##{letter}")= letter
+      .grid-row.big_ninja
+        .col-md-12
+          .filter_item.checks.js_hasdrop.brands__dropdown.form-input
+            .trigger
+              .f_value Choose a letter
+            .dropdown
+              .drop_content
+                .customscroll
+                  each letter in ['a','b','c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'r', 's','#']
+                    a.brands__dropdown-link.link--secondary(href="##{letter}")= letter
+      -
+        var brands = [
+          ['a', 'A Tentative Atelier', 'A.F.Vandevorst', 'Acne','A Tentative Atelier', 'A.F.Vandevorst', 'Acne','A Tentative Atelier', 'A.F.Vandevorst', 'Acne'],
+          ['b', 'Bagong Bali Galiery', 'Band of Outsiders'],
+          ['c', 'C.P. Company', 'CALE FRAGRANZED\'AUTORE'],
+          ['d', 'D Tentative Atelier', 'D.F.Vandevorst', 'Dcne'],
+          ['e', 'Eagong Bali Galiery', 'Eand of Outsiders'],
+          ['f', 'F.P. Company', 'FALE FRAGRANZED\'AUTORE'],
+          ['g', 'Gagong Bali Galiery', 'Gand of Outsiders'],
+          ['h', 'H.P. Company', 'HALE FRAGRANZED\'AUTORE'],
+          ['i', 'I Tentative Atelier', 'I.F.Vandevorst', 'Icne'],
+          ['g', 'Gagong Bali Galiery', 'Gand of Outsiders'],
+          ['k', 'K.P. Company', 'KALE FRAGRANZED\'AUTORE'],
+          ['#', '12 days', '24 hours', '7 weeks']
+        ]
+        var rows = R.splitEvery(4, R.values(brands))
+
+      each row in rows
+        .grid-row.brands__row
+          each column in row
+            .col-md-2.col-md-offset-1.brands__column
+              .brands__big-letter(id="#{column[0]}")= column[0]
+              each link, i in column
+                if i > 0
+                  a.brands__link.link.link--secondary(href='#')= link

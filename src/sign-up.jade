@@ -1,0 +1,75 @@
+extend templates/page
+
+block title
+  title Sign up
+
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Sign Up
+          // popup trigger. remove it from this page
+          a.js-popup(href="#popup-sign-up")
+            mark sign-up popup trigger
+
+      .grid-row
+        .col-md-8.col-md-offset-2
+          form.authorization-form(action="")
+            .grid-row
+              .col-md-6
+                +form-row('text', 'First name')
+              .col-md-6
+                +form-row('text', 'Last name')
+              .col-md-6
+                .form-row
+                  select.chosen-select.js-chosen-select.form-input(data-placeholder="Country")
+                    // first option must be empty for placeholder
+                    each option in ['','USA','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia']
+                      option= option
+              .col-md-6
+                +form-row('email', 'E-mail')
+              .col-md-6
+                +form-row('password', 'Password')
+              .col-md-6
+                +form-row('password', 'Confirm password')
+                
+            .grid-row 
+              .col-md-6.col-md-offset-3
+                button.btn.btn--primary.btn--small-margin-top Sign up
+                div Already a member? 
+                  a.link(href="#") Sign in
+                  
+  
+    #popup-sign-up.popup.mfp-hide
+      .grid-container
+        .grid-row
+          .col-md-8.col-md-offset-2
+            .popup__inner.popup__inner--padding
+              button.mfp-close
+              h2.popup__heading Sign up
+              // below is the same form as on page
+              form.authorization-form(action="")
+                .grid-row
+                  .col-md-6
+                    +form-row('text', 'First name')
+                  .col-md-6
+                    +form-row('text', 'Last name')
+                  .col-md-6
+                    .form-row
+                      select.chosen-select.js-chosen-select.form-input(data-placeholder="Country")
+                        // first option must be empty for placeholder
+                        each option in ['','USA','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia']
+                          option= option
+                  .col-md-6
+                    +form-row('email', 'E-mail')
+                  .col-md-6
+                    +form-row('password', 'Password')
+                  .col-md-6
+                    +form-row('password', 'Confirm password')
+                    
+                .grid-row 
+                  .col-md-6.col-md-offset-3
+                    button.btn.btn--primary.btn--small-margin-top Sign up
+                    div Already a member? 
+                      a.link(href="#") Sign in

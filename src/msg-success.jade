@@ -1,0 +1,18 @@
+extend templates/page
+
+block title
+  title Success message
+  
+block variables
+  -
+    var msgIcon = 'msg-success';
+    var msgTitle = 'Your order #346912 successfully paid!';
+    var msgDesc = 'Thanks for your order! Soon, our operator will contact you<br> to confirm this order.'
+    var msgBtn = 'Proceed to payment'
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          include templates/msg

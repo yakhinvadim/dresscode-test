@@ -1,0 +1,16 @@
+.social-share {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+  left: 50%;
+  top: 50%;
+
+  &__links {
+    display: flex;
+    margin-left: 11px;
+  }
+  &__link {
+    margin: 0 11px;
+  }
+}

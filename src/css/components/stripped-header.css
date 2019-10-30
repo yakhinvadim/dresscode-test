@@ -1,0 +1,52 @@
+.stripped-header {
+  display: flex;
+
+  &__heading {
+    margin: 0;
+    margin-right: 10px;
+    line-height: 30px;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #474747;
+    font-weight: 700;
+  }
+  &__stripe {
+    flex: 1;
+    margin: auto;
+    background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+    background-repeat: no-repeat;
+    height: 1px;
+    &--slider {
+      margin-right: 60px;
+    }
+  }
+
+  &--white &__stripe {
+    background-image: repeating-linear-gradient(90deg, #fff 0px, #fff 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px);
+
+  }
+  &--white &__heading {
+    color: #fff;
+  }
+
+  &--breadcrumbs {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+  &--primary {
+    margin-top: 50px;
+  }
+}
+
+.stripe__line {
+  background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .5) 0px, rgba(0, 0, 0, .5) 1px, #fff 1px, #fff 3px);
+  background-repeat: no-repeat;
+  height: 1px;
+}
+
+@media(max-width: 767px){
+
+  .stripped-header__stripe--slider {
+    margin-right: 0;
+  }
+}

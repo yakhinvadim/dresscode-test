@@ -1,0 +1,24 @@
+:root .slider-product-thumb {
+  margin-top: -12px;
+  &__slide {
+    background-size: cover;
+    background-position: center;
+    height: 109px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .slick-arrow {
+    transform: rotate(90deg);
+    position: relative;
+    left:50%;
+    margin-left: -10px;
+  }
+  .slick-prev {
+    bottom: -10px;
+    margin-bottom: 15px;
+  }
+  .slick-next {
+    top: -05px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,28 @@
+.product
+  a.product__image(href="#" style="background-image: url('temp/img/catalog-3.jpg')")
+    .product__badges
+      .product__badge.product__badge--free-shipping Free shipping
+        svg.icon-badge.icon-badge--free-shipping
+          use(xlink:href="resources/img/sprite.svg#badge")
+      .product__badge.product__badge--sale Sale
+        svg.icon-badge.icon-badge--sale
+          use(xlink:href="resources/img/sprite.svg#badge")
+      .product__badge.product__badge--new New
+        svg.icon-badge.icon-badge--new
+          use(xlink:href="resources/img/sprite.svg#badge")
+      .product__badge.product__badge--hit Hit
+        svg.icon-badge.icon-badge--hit
+          use(xlink:href="resources/img/sprite.svg#badge")
+    // there is no .product__hover if product has only one size
+    .product__hover
+      .product__size-label Sizes
+      ul.product__sizes.ul--reset
+        each size in ['S', 'M', 'L', 'XL']
+          li.product__size= size
+      
+  .product__info
+    a.product__name.link.link--styled(href="#") Anonymous Ism Grind London
+    .product__description Fair Isle Cotton Blend Socks Maroon
+    .product__price.price
+      span.price__current N500
+      span.price__old N560

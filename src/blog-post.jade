@@ -1,0 +1,99 @@
+extend templates/page
+block title
+  title Blog post
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading 30 Supermodels Whose Careers Were Launched
+      .grid-row
+        .col-md-10.col-md-offset-1
+          .slick.slider-img.js-slider-img
+            -
+              var slides = [
+                {
+                  image: 'temp/img/main-slide-1.jpg'
+                },
+                {
+                  image: 'temp/img/main-slide-2.jpg'
+                },
+                {
+                  image: 'temp/img/main-slide-3.jpg'
+                },
+                {
+                  image: 'temp/img/main-slide-4.jpg'
+                },
+                {
+                  image: 'temp/img/blog-post.png'
+                }
+              ]
+            each slide in slides
+              img.slider-img__slide(src="#{slide.image}", alt="")
+      .grid-row
+        .col-md-8.col-md-offset-2
+          p While it's easy to get hung up on the latest trend or the season's It bags, style really isn't something that can be bought. Sure, editors and insiders have their share of chic gear, but the reason why some become icons and inspirations is because of how they put the whole look together. At the end of the day, it's about how you style it — and styling, friends, is free. 
+          p With that in mind, we've zeroed in on just six quick ways to wear your clothes — small ways to tweak your jacket or cuff your jeans that have a major impact on how your whole outfit looks. Plus, these aren't seasonal or of-the-moment, these are timeless tricks that work again and again. Scroll through to find out how to give your outfit an quick, free update for 2015. 
+          figure
+            img(src="temp/img/blog-post.png", alt="")
+            figcaption Tim Regas/ Instagram user wheresmydriver
+          p Hilary Rhoda's wedding dress wasn't over the top: it was striking and bold — a sleek column gown by Carolina Herrera that perfectly flattered her figure. This design was all about the details, including a sparkling green plunging neckline and a jeweled halter that complemented the supermodel's Chopard jewels.
+          h2 This 18-Year-Old With Down Syndrome Just Won Model of the Year, and This Is Why
+          p Read on to see more photos of the glowing bride on her special day, along with a shot of Hilary and her new husband, Sean Avery, exchanging rings. Plus, don't miss the Instagram that Dannijo's Danielle Snyder shared — a close-up of Hilary's something blue.
+          p If you're like most of the brides we know, searching for the perfect dress was (or is) time-consuming, wonderful, and just a tad stressful. Since you're only going to be wearing it once, make the most of your big day by taking all kinds of photos. While you're working on a shot list to hand over to your photographer, be sure to spend time drafting up scenarios and events that'll show your dress from the best angles possible. To help, we've rounded up some gorgeous pics to inspire you, including detail shots and pretty lighting you might not have thought of yet (and don't miss our shot list for stunning hair- and makeup-focused pictures!). 
+      .grid-row
+        .col-md-12
+          .paginator
+            
+            a.link.link--secondary.paginator__arrow.paginator__arrow--prev.small_ninja(href="#") Previous news
+              
+            .social-share
+              span.social-share__label Share link:
+              .social-share__links
+                
+                a.social-share__link.link.link--secondary(href="#")
+                  svg.icon-soc-vk
+                    use(xlink:href="resources/img/sprite.svg#soc-vk")
+                      
+                a.social-share__link.link.link--secondary(href="#")
+                  svg.icon-soc-fb
+                    use(xlink:href="resources/img/sprite.svg#soc-fb")
+                      
+                a.social-share__link.link.link--secondary(href="#")
+                  svg.icon-soc-tw
+                    use(xlink:href="resources/img/sprite.svg#soc-tw")
+                      
+            a.link.link--secondary.paginator__arrow.paginator__arrow--next.small_ninja(href="#") Next news
+      .grid-row.small_ninja
+        .col-md-12
+          .stripped-header
+            h3.stripped-header__heading Also read
+            .stripped-header__stripe
+        -
+          var array = [
+            {
+              heading: 'Dresscode',
+              image:   'temp/img/news-1.jpg',
+              summary: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising.'
+            },
+            {
+              heading: 'New Adidas Collection',
+              image:   'temp/img/news-2.jpg',
+              summary: 'No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know.'
+            },
+            {
+              heading: 'Shoes Sale',
+              image:   'temp/img/news-3.jpg',
+              summary: 'Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.'
+            }
+          ]
+        each object in array
+          .col-md-4
+            .news
+              h4.news__heading
+                a.link.link--secondary.link--no-color(href="#")= object.heading
+              a(href="#")
+                img.news__image(src="#{object.image}", alt="")
+              .news__summary
+                p= object.summary
+              a.link(href="#") read more

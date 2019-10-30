@@ -1,0 +1,40 @@
+.size-selector {
+  display: flex;
+  margin-right: 5px;
+  &__label {
+    margin-right: 8px;
+    line-height: 32px;
+  }
+  &__sizes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__size {
+    min-width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 0 5px;
+    &--current {
+      background: #f1f1f1;
+      border-color: #39ced5;
+    }
+    &--disabled {
+      color: #999999;
+      cursor: default;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .size-selector {
+    &__label {
+      margin-right: 8px;
+    }
+  }
+}

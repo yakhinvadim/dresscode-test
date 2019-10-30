@@ -1,0 +1,303 @@
+extend templates/page
+
+block title
+  title Checkout
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Checkout
+          
+      .grid-row
+        .col-md-6.small_ninja
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-2
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-1.jpg", alt="")
+            .col-md-6
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter 1
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-2
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-2.jpg", alt="")
+            .col-md-6
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter 1
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+              .cart-item__total-price
+                span.big_ninja P rice: 
+                span N375
+          .grid-row.cart-item.cart-row
+            .cart-row__borders
+            .col-md-2
+              a.cart-item__image(href="#")
+                img(src="temp/img/catalog-3.jpg", alt="")
+            .col-md-6
+              .cart-item__product-info
+                a.cart-item__title.link.link--styled(href="#") Anonymous Ism
+                div Fair Isle Cotton Blend Socks Maroon
+                .cart-item__article Article: ZA665KODE
+            .col-md-4
+              .cart-item__price-counter 1
+                svg.icon-cross
+                  use(xlink:href="resources/img/sprite.svg#cross")
+                .price N375
+                  span.price__old N390
+              .cart-item__total-price
+                span.big_ninja Price: 
+                span N375
+                
+          .grid-row.cart-footer.cart-row
+            .col-md-4.col-md-offset-8
+              include templates/cart-footer__total
+            
+        
+          
+            
+        .col-md-6
+          .checkout
+
+              // add class "checkout__step--completed" for completed steps
+              // add class "checkout__step--not-started" for not started steps
+              .checkout__step
+
+                .checkout__step-header
+                  h4.checkout__step-heading 1. Contacts
+                  button.link.link--primary.checkout__step-edit Edit
+
+                .checkout__step-content
+                  .js_toggle
+                    .js_toggle_content#checkout__signup
+                      .checkout__auth-toggle-wrapper Already a member? 
+                        a.link(href="#checkout__login").js_toggle_btn Sign in
+                      form(action="")
+                        .grid-row
+                          .col-md-6
+                            +form-row('text', 'First name')
+                          .col-md-6
+                            +form-row('text', 'Last name')
+                          .col-md-6
+                            +form-row('tel', 'Phone')
+                          .col-md-6
+                            +form-row('email', 'E-mail')
+                        .grid-row
+                          .col-md-6.col-md-offset-3
+                            button.btn.btn--primary.btn--no-margin-bottom.btn--small-margin-top(type="submit") Continue
+                            
+                        
+                    .js_toggle_content#checkout__login
+                      .checkout__auth-toggle-wrapper Not a member? 
+                        a.link(href="#checkout__signup").js_toggle_btn Sign up
+                      form(action="")
+                        .grid-row
+                          .col-md-6
+                            +form-row('email', 'E-mail')
+                          .col-md-6
+                            +form-row('password', 'Password')
+                        .sign-in-actions
+                          +checkbox('remember-user', 'checked')(class="checkbox--no-margin-bottom")
+                            span.checkbox__label Remember me
+                          a.link(href="#") Forgot password
+                        .grid-row
+                          .col-md-6.col-md-offset-3
+                            button.btn.btn--primary.btn--no-margin-bottom.btn--small-margin-top(type="submit") Continue
+
+                .checkout__step-summary Ivan Ivanov, +7 916 500-81-15, lolwhat@gmail.com 
+
+
+              .checkout__step
+
+                .checkout__step-header
+                  h4.checkout__step-heading 2. Delivery and payment
+                  button.link.link--primary.checkout__step-edit Edit
+                  
+                .checkout__step-content
+
+                  .checkout__substep.checkout__substep--inputs.checkout__substep--no-border
+                    form(action="")
+                      .grid-row
+                        .col-md-6
+                          .form-row.form-row--no-margin-bottom-md
+                            select.form-input.chosen-select.js-chosen-select(data-placeholder="Country")
+                              // first option must be empty for placeholder
+                              each option in ['','USA','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia','Spain','Russia']
+                                option= option
+                        .col-md-6
+                          .form-row.form-row--no-margin-bottom
+                            select.form-input.chosen-select.js-chosen-select(data-placeholder="City")
+                              // first option must be empty for placeholder
+                              each option in ['','Atlanta','NYC','Another City','Very so much a lot looooooong city name']
+                                option= option
+                  form(action="")
+                    .js_tabs
+                      .tab-panel
+                        a(href="#tab_01").tab-panel__tab.js_tab_btn delivery 
+                          span.small_ninja to address
+                        a(href="#tab_02").tab-panel__tab.js_tab_btn self-delivery
+                      .tab_content
+                        .js_tab_content#tab_01
+                          
+                          .checkout__substep.checkout__substep--radios
+                            
+                            h5.checkout__substep-heading delivery method
+
+                            .grid-row
+                              .col-md-6.col-xs-8
+                                +radio('delivery-method', 'checked')
+                                  span.radio__label Courier delivery
+                              .col-md-2.small_ninja 1-2 days
+                              .col-md-2.col-xs-4.checkout__delivery-price N38
+                                
+                            .grid-row
+                              .col-md-6.col-xs-8
+                                +radio('delivery-method')
+                                  span.radio__label ExPost
+                              .col-md-2.small_ninja 2-3 days
+                              .col-md-2.col-xs-4.checkout__delivery-price N51
+
+                            
+                          .checkout__substep.checkout__substep--inputs
+
+                            
+                              h5.checkout__substep-heading delivery address
+                              .grid-row
+                                .col-md-8
+                                  .form-row.js_address-select.address-select
+                                    -
+                                      var addresses = [
+                                        '1 Orleans St SE Apt 4, Atlanta, Georgia, USA',
+                                        '2 Orleans St SE Apt 4, Atlanta, Georgia, USA',
+                                        '3 Orleans St SE Apt 4, Atlanta, Georgia, USA, Apt 4, Atlanta, Georgia, USA'
+                                      ]
+                                    select.form-input.chosen-select.addr-chosen-select
+                                      // first option must be empty for placeholder
+                                      each option in addresses
+                                        option= option
+                                      
+                                .col-md-4
+                                  .address-actions
+                                    button.btn.btn--link.btn--inline.btn--sm.btn--no-margin-bottom.big_ninja Edit address
+                                    button.btn.btn--link.btn--inline.btn--sm.btn--no-margin-bottom.address-actions__edit
+                                      svg.icon-plus--big.small_ninja
+                                        use(xlink:href="resources/img/sprite.svg#plus")
+                                      | New address
+                                
+                          .checkout__substep.checkout__substep--inputs
+                            h5.checkout__substep-heading delivery address
+                            include templates/address-form
+                                
+                          .checkout__substep.checkout__substep--inputs
+                                
+                            .js_address-edit
+                              h5.checkout__substep-heading Editing address
+                              include templates/address-form
+                              .address-actions
+                                button.btn.btn--link.btn--inline.btn--sm.btn--no-margin-bottom Cancel
+                                button.btn.btn--link.btn--inline.btn--sm.btn--no-margin-bottom.big_ninja Delete
+
+                        .js_tab_content#tab_02
+                          .checkout__substep.checkout__substep--radios
+                            
+                            h5.checkout__substep-heading our stores
+                            
+                            .grid-row
+                              .col-md-8
+                                +radio('pickup-points', 'checked')
+                                  .radio__label
+                                    a.link.link--dotted.js-popup-map(href="#popup-map") 1 Orleans St SE Apt 4, Atlanta, Georgia, USA
+                                    div 11:00-22:00
+                                    .checkout__phone.big_ninja +45 314 943-12-85
+                              .col-md-4
+                                .checkout__phone.checkout__phone--md.small_ninja +45 314 943-12-85
+                                
+                            .grid-row
+                              .col-md-8
+                                +radio('pickup-points')
+                                  .radio__label
+                                    a.link.link--dotted.js-popup-map(href="#popup-map") 5 Green Avenue, Apt. 3, Ann Arbor, USA
+                                    div 10:00-20:00
+                                    .checkout__phone.big_ninja +45 307 431-94-99
+                              .col-md-4
+                                .checkout__phone.checkout__phone--md.small_ninja +45 307 431-94-99
+                            
+                            .grid-row
+                              .col-md-8
+                                +radio('pickup-points')
+                                  .radio__label
+                                    a.link.link--dotted.js-popup-map(href="#popup-map") 20 Lombard Str., London 3 WRS, UK
+                                    div 09:00-21:00
+                                    .checkout__phone.big_ninja +45 391 512-89-40
+                              .col-md-4
+                                .checkout__phone.checkout__phone--md.small_ninja +45 391 512-89-40
+                                
+                    .checkout__substep.checkout__substep--radios
+                      h5.checkout__substep-heading Payment method
+                      ul.ul--reset
+                        li
+                          +radio('payment-method', 'checked')
+                            span.radio__label Cash
+                        li
+                          +radio('payment-method')
+                            span.radio__label Bank transfer
+                        li
+                          +radio('payment-method')
+                            span.radio__label VISA, MasterCard
+
+                    .grid-row
+                      .col-md-6.col-md-offset-3
+                        button.btn.btn--primary.btn--no-margin-bottom.btn--big-margin-top(type="submit") Continue
+
+                .checkout__step-summary ExPost, 1 Orleans St SE Apt 4, Atlanta, Georgia, USA (Cash)
+
+              .checkout__step
+                .checkout__step-header
+                  h4.checkout__step-heading 3. Comment
+
+                .checkout__step-content
+                  form(action="")
+                    .form-row
+                      textarea.form-input.form-input--textarea(placeholder="Comment")
+                    .form-row.form-row--no-margin-bottom
+                      +checkbox('rules-agreement')(class="checkbox--no-margin-bottom")
+                        div.checkbox__label  I have read and accept 
+                          a.link(href="#") Terms of service
+                          .form-row__error Error message
+                    .checkout__total.big_ninja
+                      include templates/cart-footer__total
+                    .grid-row
+                      .col-md-6.col-md-offset-3
+                        button.btn.btn--primary.btn--no-margin-bottom.btn--big-margin-top(type="submit") Confirm
+    
+    #popup-map.popup.mfp-hide
+      .grid-container
+        .grid-row
+          .col-md-12
+            .popup__inner
+              button.mfp-close
+              #map-desktop
+                
+block scripts
+  script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZEZjhtj7fIdIyQwCwn_TKR-JuvP6oYu0&callback=initMap')

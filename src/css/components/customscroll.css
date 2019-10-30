@@ -1,0 +1,34 @@
+.mCustomScrollBox {
+  outline: none !important;
+}
+
+.mCSB_scrollTools {
+  width: 4px;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 4px;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 0;
+  background-color: #31b1b6;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #31b1b6;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  border-radius: 0;
+  background-color: #e6e6e6;
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+  background-color: #31b1b6;
+}

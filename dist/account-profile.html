@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Profile</title>
+    <meta name="tagline" content="kodix.ru">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="resources/img/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="resources/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="temp/layout.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" type="text/css">
+  </head>
+  <body>
+    <header class="page-header"> 
+      <div class="page-header__mobile-area big_ninja">
+        <button class="burger-toggle js-burger-toggle"></button>
+        <svg class="icon-logo icon-logo--mobile">
+          <use xlink:href="resources/img/sprite.svg#logo"></use>
+        </svg><a href="#" class="cart-link">
+          <svg class="icon-cart--mobile">
+            <use xlink:href="resources/img/sprite.svg#cart--mobile"></use>
+          </svg><span class="cart-counter--mobile">1</span></a>
+      </div>
+      <div class="page-header__menu-area small_ninja">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="col-md-12">
+              <div class="menu-content">
+                <div class="menu-content__text">Hello, Muhhamadu Buhari, your cart is waiting for <a href="#" class="menu-content__text-link">checkout</a></div>
+                <div class="menu-content__links"><a href="#popup-search" class="menu-content__link js-popup">
+                    <svg class="icon-search">
+                      <use xlink:href="resources/img/sprite.svg#search"></use>
+                    </svg>Search</a><a href="#" class="menu-content__link">
+                    <svg class="icon-account">
+                      <use xlink:href="resources/img/sprite.svg#account"></use>
+                    </svg>My account
+                    <!-- if user is not signed in, change button text to 'sign in' and show sign in popup on click--></a><a href="#" class="menu-content__link">
+                    <svg class="icon-cart">
+                      <use xlink:href="resources/img/sprite.svg#cart"></use>
+                    </svg>Cart (<span class="cart-counter--desktop">1</span>)</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__nav-area">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="col-md-12"><a href="#" class="small-logo small_ninja">
+                <svg class="icon-logo--small">
+                  <use xlink:href="resources/img/sprite.svg#logo--small"></use>
+                </svg></a>
+              <div class="page-header__phone big_ninja">Phone: +23 461 555-12-12</div>
+              <form class="mobile-search big_ninja">
+                <input type="text" placeholder="Search in catalog" class="form-input">
+                <button type="submit" class="mobile-search__submit">
+                  <svg class="icon-search--mobile">
+                    <use xlink:href="resources/img/sprite.svg#search--mobile"></use>
+                  </svg>
+                </button>
+              </form>
+              <nav class="navigation navigation--primary">
+                <div class="navigation__item navigation__item--submenu navigation__item--submenu-big"><a href="#" class="navigation__item-name link link--secondary">Man</a>
+                  <div class="navigation__submenu-toggle big_ninja">
+                    <div class="icon-plus-minus icon-plus-minus--navigation"></div>
+                  </div>
+                </div>
+                <div class="navigation__item navigation__item--submenu navigation__item--submenu-big"><a href="#" class="navigation__item-name link link--secondary">Woman</a>
+                  <div class="navigation__submenu-toggle big_ninja">
+                    <div class="icon-plus-minus icon-plus-minus--navigation"></div>
+                  </div>
+                </div>
+                <div class="navigation__item navigation__item--submenu navigation__item--submenu-big"><a href="#" class="navigation__item-name link link--secondary">Accessories</a>
+                  <div class="navigation__submenu-toggle big_ninja">
+                    <div class="icon-plus-minus icon-plus-minus--navigation"></div>
+                  </div>
+                  <div class="navigation__submenu">
+                    <div class="navigation__submenu-column"><a href="#" class="navigation__submenu-heading link link--secondary">Some title</a>
+                      <ul class="ul--reset">
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Athletic Apparel</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Maternity</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Shorts</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Mixed Items and Lots</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Other Women's Clothing</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Sweaters</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Suits and Blazers</a></li>
+                      </ul>
+                    </div>
+                    <div class="navigation__submenu-column"><a href="#" class="navigation__submenu-heading link link--secondary">New collection</a>
+                      <ul class="ul--reset">
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Coats and Jackets</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Dresses</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Pants</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">T-Shirts</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Hosiery and Socks</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Leggings</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Skirts</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Tops and Blouses</a></li>
+                      </ul>
+                    </div>
+                    <div class="navigation__submenu-column"><a href="#" class="navigation__submenu-heading link link--secondary">New &amp; Hots</a>
+                      <ul class="ul--reset">
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Jeans</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Sweaters</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Suits and Blazers</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Sweats and Hoodies</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Intimates and Sleep and Skirts and a lot of other things</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Jumpsuits and Rompers</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Swimwear</a></li>
+                        <li><a href="#" class="link link--secondary navigation__submenu-link">Vests</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary">Sale</a></div>
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary">Brands  </a></div>
+                <div class="navigation__item navigation__item--submenu navigation__item--submenu-small"><a href="#" class="navigation__item-name link link--secondary">Magazine</a>
+                  <div class="navigation__submenu-toggle big_ninja">
+                    <div class="icon-plus-minus icon-plus-minus--navigation"></div>
+                  </div>
+                  <div class="navigation__submenu navigation__submenu--small">
+                    <ul class="ul--reset">
+                      <li><a href="#" class="link link--secondary navigation__submenu-link">My-Shop, City</a></li>
+                      <li><a href="#" class="link link--secondary navigation__submenu-link">DressCode Show Room</a></li>
+                      <li><a href="#" class="link link--secondary navigation__submenu-link">DressCode Corner</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <nav class="navigation navigation--secondary big_ninja">
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary">
+                    <div class="navigation__icon-wrapper">
+                      <svg class="icon-account--mobile">
+                        <use xlink:href="resources/img/sprite.svg#account--mobile"></use>
+                      </svg>
+                    </div>My account</a></div>
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary"> 
+                    <div class="navigation__icon-wrapper">
+                      <svg class="icon-help">
+                        <use xlink:href="resources/img/sprite.svg#help"></use>
+                      </svg>
+                    </div>Help</a></div>
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary"> 
+                    <div class="navigation__icon-wrapper">
+                      <svg class="icon-shop">
+                        <use xlink:href="resources/img/sprite.svg#shop"></use>
+                      </svg>
+                    </div>Shops</a></div>
+                <div class="navigation__item navigation__item--link"><a href="#" class="navigation__item-name link link--secondary"> 
+                    <div class="navigation__icon-wrapper">
+                      <svg class="icon-map-marker">
+                        <use xlink:href="resources/img/sprite.svg#map-marker"></use>
+                      </svg>
+                    </div>Contacts</a></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="popup-search" class="popup mfp-hide">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="popup__inner">
+                <button class="mfp-close"></button>
+                <form action="">
+                  <div class="form-row form-row--no-margin-bottom search-form">
+                    <input type="text" placeholder="Search in catalog" class="form-input form-input--lg form-input--inline search-form__input">
+                    <button type="submit" class="btn btn--primary btn--inline btn--no-margin-bottom search-form__submit small_ninja">Search</button>
+                    <button class="search-form__mobile-submit big_ninja"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main> 
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="col-md-12">
+            <h1 class="page-heading">Profile</h1>
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="col-md-8 col-md-offset-2">
+            <ul class="account-menu ul--reset">
+              <li class="account-menu__item account-menu__item--current"><a href="#" class="account-menu__link link link--secondary">Settings</a></li>
+              <li class="account-menu__item"><a href="#" class="account-menu__link link link--secondary">Orders history</a></li>
+              <li class="account-menu__item"><a href="#" class="account-menu__link link link--secondary">Favorite</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-row">
+          <form class="account-profile__form col-md-6">
+            <div class="grid-row">
+              <div class="col-md-6">
+                <h4 class="account-profile__section-heading">Information</h4>
+                <div class="form-row">
+                  <input type="text" placeholder="First name" value="John" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+                <div class="form-row">
+                  <input type="text" placeholder="Фамилия" value="Иванов" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+                <div class="form-row">
+                  <input type="tel" placeholder="Телефон" value="+7 903 238-48-28" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+                <div class="form-row">
+                  <input type="email" placeholder="E-mail" value="lolwhat@gmail.com" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="account-profile__section-heading">Change password</h4>
+                <div class="form-row">
+                  <input type="password" placeholder="Old password" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+                <div class="form-row">
+                  <input type="password" placeholder="New password" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+                <div class="form-row">
+                  <input type="password" placeholder="Confirm password" class="form-input">
+                  <div class="form-row__error">Error text</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="col-md-6 col-md-offset-3">
+                <button type="submit" class="btn btn--primary account-profile__button">Save changes</button>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="col-md-2 col-md-offset-5"><a href="#" class="link link--primary link--centered">Sign out</a></div>
+            </div>
+          </form>
+          <form class="account-profile__form col-md-6">
+            <h4 class="account-profile__section-heading">Delivery address</h4>
+            <div class="grid-row">
+              <div class="col-md-8">
+                <div class="form-row js_address-select address-select">
+                  <select class="chosen-select addr-chosen-select form-input">
+                    <!-- first option must be empty for placeholder-->
+                    <option>1 Orleans St SE Apt 4, Atlanta, Georgia, USA</option>
+                    <option>2 Orleans St SE Apt 4, Atlanta, Georgia, USA</option>
+                    <option>3 Orleans St SE Apt 4, Atlanta, Georgia, USA, Apt 4, Atlanta, Georgia, USA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="address-actions">
+                  <button class="btn btn--link btn--inline btn--no-margin-bottom big_ninja">Edit address</button>
+                  <button class="btn btn--link btn--inline btn--no-margin-bottom address-actions__edit">
+                    <svg class="icon-plus--big small_ninja">
+                      <use xlink:href="resources/img/sprite.svg#plus"></use>
+                    </svg>New address
+                  </button>
+                </div>
+              </div>
+            </div>
+            <h5>Editing address</h5>
+            <div class="grid-row">
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="text" placeholder="First name" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="text" placeholder="Last name" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="tel" placeholder="Phone" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="email" placeholder="E-mail" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="text" placeholder="Street" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-row">
+                      <input type="text" placeholder="Postcode" class="form-input">
+                      <div class="form-row__error">Error text</div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="grid-row grid-row--tight">
+                  <div class="col-xs-4">
+                        <div class="form-row">
+                          <input type="text" placeholder="Building" class="form-input">
+                          <div class="form-row__error">Error text</div>
+                        </div>
+                  </div>
+                  <div class="col-xs-4">
+                        <div class="form-row">
+                          <input type="text" placeholder="Block" class="form-input">
+                          <div class="form-row__error">Error text</div>
+                        </div>
+                  </div>
+                  <div class="col-xs-4">
+                        <div class="form-row">
+                          <input type="text" placeholder="Apt." class="form-input">
+                          <div class="form-row__error">Error text</div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="col-md-6 col-md-offset-3">
+                <button type="submit" class="btn btn--primary account-profile__button">Save</button>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="col-md-12">
+                <div class="address-actions">
+                  <button class="btn btn--link btn--inline btn--no-margin-bottom">Cancel</button>
+                  <button class="btn btn--link btn--inline btn--no-margin-bottom big_ninja">Delete</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer_main">
+        <div class="grid-container">
+          <div class="grid-row footer_mobile_row">
+            <div class="col-xs-12 big_ninja"><a href="#popup-subscribe" class="btn btn--primary btn--md js-popup">Subscribe us</a></div>
+          </div>
+          <div class="grid-row footer_first_row">
+            <div class="col-md-5 small_ninja">
+              <svg class="icon-logo--footer">
+                <use xlink:href="resources/img/sprite.svg#logo"></use>
+              </svg>
+              <p class="footer_about">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+            </div>
+            <div class="col-md-2 small_ninja"><a href="#" class="footer_list_title link link--secondary">Man</a>
+              <ul class="ul--reset footer_list">
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Shoes</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Pants</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Jeans</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Vests</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Jackets</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Polo shirts</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 small_ninja"><a href="#" class="footer_list_title link link--secondary">Woman</a>
+              <ul class="ul--reset footer_list">
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Shoes</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Pants</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Jeans</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Vests</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Jackets</a></li>
+                <li class="footer_list_item"><a href="#" class="footer_list_item_link link link--secondary">Polo shirts</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 small_ninja">
+              <ul class="ul--reset footer_list_big">
+                <li class="footer_list_big_item"><a href="#" class="footer_list_big_item_link link link--secondary">Accessories</a></li>
+                <li class="footer_list_big_item"><a href="#" class="footer_list_big_item_link link link--secondary">Sale</a></li>
+                <li class="footer_list_big_item"><a href="#" class="footer_list_big_item_link link link--secondary">Brands</a></li>
+                <li class="footer_list_big_item"><a href="#" class="footer_list_big_item_link link link--secondary">Magazine</a></li>
+              </ul>
+            </div>
+            <div class="col-md-1">
+              <div class="social_icon"><a href="#" class="social_icon_item">
+                  <svg class="social_icon_icon icon-soc-tw--footer">
+                    <use xlink:href="resources/img/sprite.svg#soc-tw"></use>
+                  </svg></a><a href="#" class="social_icon_item">
+                  <svg class="social_icon_icon icon-soc-ig--footer">
+                    <use xlink:href="resources/img/sprite.svg#soc-ig"></use>
+                  </svg></a><a href="#" class="social_icon_item">
+                  <svg class="social_icon_icon icon-soc-fb--footer">
+                    <use xlink:href="resources/img/sprite.svg#soc-fb"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="grid-row footer_second_row small_ninja">
+            <div class="col-md-3">
+              <div class="footer_info_con">
+                <div class="footer_info_phone">phone: <a href="tel:+2345551212" class="link link--secondary">+234 555 1212</a></div>
+                <div class="footer_info_email">e-mail: <a href="mailto:shop@dresscode.org" class="link link--secondary">shop@dresscode.org</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer_info_pay">
+                <svg class="icon-yandex-money pay_item">
+                  <use xlink:href="resources/img/sprite.svg#yandex-money"></use>
+                </svg>
+                <svg class="icon-visa pay_item">
+                  <use xlink:href="resources/img/sprite.svg#visa"></use>
+                </svg>
+                <svg class="icon-master-card pay_item">
+                  <use xlink:href="resources/img/sprite.svg#master-card"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <form action="">
+                <div class="form-row form-row--no-margin-bottom subscribe-form">
+                  <label class="subscribe-form__label">Subscribe us: 
+                    <input type="text" placeholder="Your e-mail" class="form-input form-input--inline form-input--lg subscribe-form__input">
+                  </label>
+                  <button type="submit" class="btn btn--primary btn--inline btn--no-margin-bottom subscribe-form__submit">Subscribe</button>
+                  <div class="form-row__error subscribe-form__message">Error text</div>
+                  <div class="form-row__success subscribe-form__message">Success text</div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="grid-container">
+          <div class="grid-row small_ninja">
+            <div class="col-md-12">
+              <div class="simple_footer">
+                <div class="simple_footer_copyright">© 2015 Dresscode</div>
+                <div class="simple_footer_made">Made in<a href="http://kodix.ru/" class="kodix">Kodix</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a href="#" class="link link--secondary link-to-desktop big_ninja">Go to full site</a>
+      <div id="popup-subscribe" class="popup mfp-hide">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="col-md-4 col-md-offset-4">
+              <div class="popup__inner popup__inner--padding">
+                <button class="mfp-close"></button>
+                <svg class="icon-subscribe">
+                  <use xlink:href="resources/img/sprite.svg#subscribe"></use>
+                </svg>
+                <h2 class="popup__heading">Subscribe us</h2>
+                <form action="">
+                      <div class="form-row">
+                        <input type="email" placeholder="Your e-mail" class="form-input">
+                        <div class="form-row__error">Error text</div>
+                      </div>
+                  <button class="btn btn--primary btn--big-margin-top">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="resources/js/jquery-2.1.4.min.js"></script>
+    <script src="resources/js/libraries.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/config-mCustomScrollbar.js"></script>
+    <script src="temp/layout.js"></script>
+  </body>
+</html>

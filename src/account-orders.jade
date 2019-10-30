@@ -1,0 +1,83 @@
+extend templates/page
+
+block title
+  title Profile
+
+block content
+  main  
+    .grid-container
+      .grid-row
+        .col-md-12
+          h1.page-heading Profile
+      .grid-row
+        .col-md-8.col-md-offset-2
+          ul.account-menu.ul--reset
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Settings
+            li.account-menu__item.account-menu__item--current
+              a.account-menu__link.link.link--secondary(href="#") Orders history
+            li.account-menu__item
+              a.account-menu__link.link.link--secondary(href="#") Favorite
+
+      .grid-row
+        .col-md-10.col-md-offset-1
+          .account-orders
+            .account-orders__header
+              .account-orders__header-cell.small_ninja ID
+              .account-orders__header-cell Date
+              .account-orders__header-cell.small_ninja Amount
+              .account-orders__header-cell Status of order
+              .account-orders__header-cell.small_ninja Status of payment
+            -
+              var data = [
+                {
+                  'id': 'DK320DLDPY',
+                  'date': '26.08.2015',
+                  'time': '12:37',
+                  'amount': '3',
+                  'orderStatus': 'New',
+                  'paymentStatus': 'Paid'
+                },
+                {
+                  'id': 'KLTDV76FHK',
+                  'date': '15.07.2015',
+                  'time': '19:49',
+                  'amount': '1',
+                  'orderStatus': 'Completed',
+                  'paymentStatus': 'Paid'
+                },
+                {
+                  'id': 'SRMH89MDS3',
+                  'date': '25.08.2015',
+                  'time': '11:36',
+                  'amount': '1',
+                  'orderStatus': 'Completed',
+                  'paymentStatus': 'Paid'
+                },
+                {
+                  'id': 'DNEP30NFOD',
+                  'date': '25.08.2015',
+                  'time': '19:49',
+                  'amount': '1',
+                  'orderStatus': 'Cancelled',
+                  'paymentStatus': 'Not paid'
+                },
+                {
+                  'id': 'KLTDV76FHK',
+                  'date': '01.08.2015',
+                  'time': '13:17',
+                  'amount': '2',
+                  'orderStatus': 'Completed',
+                  'paymentStatus': 'Paid'
+                }
+              ]
+            each item in data
+              a.account-orders__item(href="#")
+                .account-orders__body-cell.small_ninja= item.id
+                .account-orders__body-cell= item.date
+                  // - the line below is needed to preserve a space between date and time
+                  | 
+                  span.small_ninja= item.time
+                .account-orders__body-cell.small_ninja= item.amount
+                .account-orders__body-cell= item.orderStatus
+                .account-orders__body-cell.small_ninja= item.paymentStatus

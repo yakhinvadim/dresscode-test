@@ -1,0 +1,19 @@
+.icon-plus-minus {
+  width: 11px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-image: svg('plus');
+  background-size: 100%;
+  &--navigation {
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-6px);
+  }
+}
+
+.navigation__item--submenu--opened {
+  .icon-plus-minus {
+    background-image: svg('minus');
+  }
+}

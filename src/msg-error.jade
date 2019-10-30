@@ -1,0 +1,18 @@
+extend templates/page
+
+block title
+  title Error message
+  
+block variables
+  -
+    var msgIcon = 'msg-error';
+    var msgTitle = 'Something went wrong';
+    var msgDesc = 'A payment error has occurred.'
+    var msgBtn = 'Personal page'
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          include templates/msg

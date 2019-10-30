@@ -1,0 +1,18 @@
+extend templates/page
+
+block title
+  title Empty cart
+  
+block variables
+  -
+    var msgIcon = 'msg-empty-cart';
+    var msgTitle = 'Your shopping cart is empty';
+    var msgDesc = ''
+    var msgBtn = 'Continue shopping'
+  
+block content
+  main
+    .grid-container
+      .grid-row
+        .col-md-12
+          include templates/msg
